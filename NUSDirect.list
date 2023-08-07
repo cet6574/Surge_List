@@ -1,3 +1,5 @@
-DOMAIN,youke.co // 少数派
-IP-CIDR,45.138.81.160/32,no-resolve // 少数派
-DOMAIN,nus.edu.sg // NUS
+# > 少数派
+DOMAIN-SUFFIX,youke.co
+IP-CIDR,45.138.81.160/32,no-resolve
+# > NUS
+DOMAIN-SUFFIX,nus.edu.sg

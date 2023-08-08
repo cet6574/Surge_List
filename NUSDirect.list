@@ -2,4 +2,5 @@
 DOMAIN-SUFFIX,youke.co
 IP-CIDR,45.138.81.160/32,no-resolve
 # > NUS
-DOMAIN-SUFFIX,nus.edu.sg
+## DOMAIN-SUFFIX,nus.edu.sg
+DOMAIN-KEYWORD,nus.edu

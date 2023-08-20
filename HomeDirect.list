@@ -1,7 +1,4 @@
-# > 少数派
-DOMAIN-SUFFIX,youke.co
-DOMAIN-SUFFIX,sspai.com
-IP-CIDR,45.138.81.160/32,no-resolve
-# > NUS
-## DOMAIN-SUFFIX,nus.edu.sg
-DOMAIN-KEYWORD,nus.edu
+# > xhs
+DOMAIN-KEYWORD,xiaohongshu
+# > SER
+DOMAIN-KEYWORD,4horl

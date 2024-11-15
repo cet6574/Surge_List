@@ -1,4 +1,4 @@
 # > Apple Intelligence
-DOMAIN-SUFFIX,apple-relay.apple.com,AI
-DOMAIN-SUFFIX,apple-relay.cloudflare.com,AI
-DOMAIN-KEYWORD,apple-relay,AI
+DOMAIN-SUFFIX,apple-relay.apple.com
+DOMAIN-SUFFIX,apple-relay.cloudflare.com
+DOMAIN-KEYWORD,apple-relay

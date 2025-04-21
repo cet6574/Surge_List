@@ -1,8 +1,8 @@
-# Own
+# > Own
 DOMAIN-SUFFIX,brandybuck.xyz
 DOMAIN-SUFFIX,brandybuck.us
 IP-CIDR,108.61.132.83/24,no-resolve
 IP-CIDR,185.45.193.166/24,no-resolve
-# Wix
-DOMAIN-SUFFIX,wixsite.com,DIRECT
-DOMAIN-SUFFIX,wix.com,DIRECT
+# > Wix
+DOMAIN-SUFFIX,wixsite.com
+DOMAIN-SUFFIX,wix.com

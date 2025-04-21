@@ -6,3 +6,4 @@ IP-CIDR,185.45.193.166/24,no-resolve
 # > Wix
 DOMAIN-SUFFIX,wixsite.com
 DOMAIN-SUFFIX,wix.com
+DOMAIN-SUFFIX,wixstatic.com

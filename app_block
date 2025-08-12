@@ -1,0 +1,2821 @@
+Okay, here is the transformed Quantumult X rule set to Surge rules, following your specified term changes.
+
+**Key Changes Applied:**
+*   `HOST` -> `DOMAIN`
+*   `HOST-SUFFIX` -> `DOMAIN-SUFFIX`
+*   `HOST-WILDCARD` -> `DOMAIN-WILDCARD` (for patterns like `prefix-*.domain.com`)
+*   `HOST-WILDCARD` with internal wildcards (like `*-keyword-*.domain.com`) or more complex patterns are generally best translated to `DOMAIN-KEYWORD` in Surge for broadest matching. I've used `DOMAIN-KEYWORD` for these cases.
+*   `HOST-KEYWORD` -> `DOMAIN-KEYWORD`
+*   `IP6-CIDR` -> `IP-CIDR6`
+
+```surge
+DOMAIN, a.line.me, NoMalwares
+DOMAIN, d.line-scdn.net, NoMalwares
+DOMAIN, ad.line-scdn.net, NoMalwares
+DOMAIN, linecrs.line-scdn.net, NoMalwares
+DOMAIN, crs-event.line.me, NoMalwares
+DOMAIN, crs-hometab-event.line.me, NoMalwares
+DOMAIN, uts-front.line-apps.com, NoMalwares
+DOMAIN, w3-reporting.reddit.com, NoMalwares
+DOMAIN, w3-reporting-nel.reddit.com, NoMalwares
+DOMAIN, tp2p.kg.qq.com, NoMalwares
+DOMAIN, sd-gl.xinqiucc.com, NoMalwares
+DOMAIN, xpis-xcdn.youku.com, NoMalwares
+DOMAIN, xpis-mob-xcdn.youku.com, NoMalwares
+DOMAIN, spcsz.cdn.bcebos.com, NoMalwares
+DOMAIN, www.qchannel01.cn, NoMalwares
+DOMAIN, www.qchannel04.cn, NoMalwares
+DOMAIN-SUFFIX, qchannel03.cn, NoMalwares
+DOMAIN, tls-amap.dingtalk.com, NoMalwares
+DOMAIN, tls-eleme.dingtalk.com, NoMalwares
+DOMAIN, tls-goofish.dingtalk.com, NoMalwares
+DOMAIN, metis-er.ele.me, NoMalwares
+DOMAIN-SUFFIX, alibabachengdun.com, NoMalwares
+DOMAIN-SUFFIX, alibabachengdun.net, NoMalwares
+DOMAIN, atoken.m.taobao.com, NoMalwares
+DOMAIN-SUFFIX, qiezibenpao.com, NoMalwares
+DOMAIN, httpdnsmultiapi.meituan.com, NoMalwares
+DOMAIN, httpdnsmultiapivip.meituan.com, NoMalwares
+DOMAIN-SUFFIX, httpdns.qcloud.com, NoMalwares
+DOMAIN-SUFFIX, httpdns.aliyuncs.com, NoMalwares
+DOMAIN, msp.meituan.com, NoMalwares
+DOMAIN-SUFFIX, dns.wechat.com, NoMalwares
+DOMAIN, dns.alidns.com, NoMalwares
+DOMAIN, doh.pub, NoMalwares
+IP-CIDR, 119.29.29.80/28, NoMalwares
+DOMAIN-SUFFIX, gslb.livehwc3.cn, NoMalwares
+DOMAIN-SUFFIX, tec73.com, NoMalwares
+DOMAIN-SUFFIX, tliveapp.com, NoMalwares
+DOMAIN-SUFFIX, tlivemcdn.com, NoMalwares
+DOMAIN-SUFFIX, tlivesource.com, NoMalwares
+DOMAIN-SUFFIX, mobile-collector.newrelic.com, NoMalwares
+DOMAIN, amdc-sibling.alipay.com.cn, NoMalwares
+DOMAIN, amdc-thirdparty.alipay.com, NoMalwares
+DOMAIN, open.kwaizt.com, NoMalwares
+DOMAIN, sdktmp.hubcloud.com.cn, NoMalwares
+DOMAIN, data.bilibili.com, NoMalwares
+DOMAIN, al-log.d.meituan.net, NoMalwares
+DOMAIN, maplocatesdksnapshot.d.meituan.net, NoMalwares
+DOMAIN, route-stats.d.meituan.net, NoMalwares
+DOMAIN-KEYWORD, -flv-live, NoMalwares
+DOMAIN, beauty-tx-flv.meituan.net, NoMalwares
+DOMAIN, beauty-tx-flv-live.meituan.net, NoMalwares
+DOMAIN, beauty-hw-flv.meituan.net, NoMalwares
+DOMAIN, beauty-hw-flv-live.meituan.net, NoMalwares
+DOMAIN, beauty-kuai-flv.meituan.net, NoMalwares
+DOMAIN, beauty-kuai-flv-live.meituan.net, NoMalwares
+DOMAIN-SUFFIX, mtvod.meituan.net, NoMalwares
+DOMAIN, upos-sz-staticcos.bilivideo.com, NoMalwares
+DOMAIN, live-aipersonalized.meituan.com, NoMalwares
+DOMAIN, ads-img-al.xhscdn.com, NoMalwares
+DOMAIN, ads-img-qc.xhscdn.com, NoMalwares
+DOMAIN, ads-video-al.xhscdn.com, NoMalwares
+DOMAIN, ads-video-qc.xhscdn.com, NoMalwares
+DOMAIN, ads-vp5.xhscdn.com, NoMalwares
+DOMAIN, growth-img.xhscdn.com, NoMalwares
+DOMAIN, sns-webpic.xhscdn.com, NoMalwares
+DOMAIN, xhslive-video.xhscnd.com, NoMalwares
+DOMAIN, gslb.xiaohongshu.com, NoMalwares
+DOMAIN, api.neixin.cn, NoMalwares
+DOMAIN, catdot.dianping.com, NoMalwares
+DOMAIN, medusa.dianping.com, NoMalwares
+DOMAIN-SUFFIX, sankuai.com, NoMalwares
+DOMAIN-SUFFIX, ynuf.aliapp.org, NoMalwares
+DOMAIN-SUFFIX, redbascket.com, NoMalwares
+DOMAIN-SUFFIX, ut.taobao.com, NoMalwares
+DOMAIN, shark-tracer.netease.com, NoMalwares
+DOMAIN, tracking.purchasely.io, NoMalwares
+DOMAIN, fe-platform.xhscdn.com, NoMalwares
+DOMAIN, sat0.net, NoMalwares
+DOMAIN-SUFFIX, atdmt.com, NoMalwares
+DOMAIN-SUFFIX, atlassolutions.com, NoMalwares
+DOMAIN, b-graph-fallback.facebook.com, NoMalwares
+DOMAIN, conversionsapigateway.com, NoMalwares
+DOMAIN, crashlogs.whatsapp.net, NoMalwares
+DOMAIN, dit.whatsapp.net, NoMalwares
+DOMAIN, facebookblueprint.com, NoMalwares
+DOMAIN, gateway.facebook.com, NoMalwares
+DOMAIN, test-gateway.instagram.com, NoMalwares
+DOMAIN, graph.fbpigeon.com, NoMalwares
+DOMAIN, graph.instagram.com, NoMalwares
+DOMAIN, graph-video.facebook.com, NoMalwares
+DOMAIN, graph.whatsapp.com, NoMalwares
+DOMAIN, lithium.facebook.com, NoMalwares
+DOMAIN, lookaside.facebook.com, NoMalwares
+DOMAIN, lookaside.fbsbx.com, NoMalwares
+DOMAIN, lookaside.instagram.com, NoMalwares
+DOMAIN, platform-lookaside.fbsbx.com, NoMalwares
+DOMAIN, transparency.meta.com, NoMalwares
+DOMAIN, z-m-graph.facebook.com, NoMalwares
+DOMAIN, xy.fbcdn.net, NoMalwares
+DOMAIN, xz.fbcdn.net, NoMalwares
+DOMAIN, xp-cdn.apple.com, NoMalwares
+DOMAIN, alive.github.com, NoMalwares
+DOMAIN, live.github.com, NoMalwares
+DOMAIN-SUFFIX, fastly-analytics.com, NoMalwares
+DOMAIN-SUFFIX, destinationurl.com, NoMalwares
+DOMAIN-SUFFIX, adtrafficquality.google, NoMalwares
+DOMAIN, myphonenumbers-pa.googleapis.com, NoMalwares
+DOMAIN, geller-pa.googleapis.com, NoMalwares
+DOMAIN, locationhistory-pa.googleapis.com, NoMalwares
+DOMAIN, gmscompliance-pa.googleapis.com, NoMalwares
+DOMAIN-SUFFIX, content-storage-upload.googleapis.com, NoMalwares
+DOMAIN, cloudusersettings-pa.clients6.google.com, NoMalwares
+DOMAIN-SUFFIX, 1e100cdn.net, NoMalwares
+DOMAIN, gtm.wise.com, NoMalwares
+DOMAIN-SUFFIX, checks.google.com, NoMalwares
+DOMAIN, checks.googleapis.com, NoMalwares
+DOMAIN, bdlog.tanx.com, NoMalwares
+DOMAIN-SUFFIX, data.adobedc.net, NoMalwares
+DOMAIN, dpm.demdex.net, NoMalwares
+DOMAIN, sensors.saasexch.com, NoMalwares
+DOMAIN, local.adguard.org, NoMalwares
+DOMAIN, safebrowsing.googleapis.com, NoMalwares
+DOMAIN-SUFFIX, safebrowsing.apple, NoMalwares
+DOMAIN, notes-analytics-events.apple.com, NoMalwares
+DOMAIN, i-resv.meituan.com, NoMalwares
+DOMAIN, analytics.adjust.com, NoMalwares
+DOMAIN, dypnsapi-dualstack.aliyuncs.com, NoMalwares
+DOMAIN, line3-h5-mobile-api.biligame.com, NoMalwares
+DOMAIN, mediacloud.xiaohongshu.com, NoMalwares
+DOMAIN, ntp.nasa.gov, NoMalwares
+
+# ===== Managed by GitHub Action: UPPERCASE IP-CIDR / IP6-CIDR / IP-ASN begin =====
+IP-ASN,1012,NoMalwares
+IP-ASN,140915,NoMalwares
+IP-ASN,14651,NoMalwares
+IP-ASN,18044,NoMalwares
+IP-ASN,401111,NoMalwares
+IP-ASN,40115,NoMalwares
+IP-ASN,44324,NoMalwares
+IP-ASN,5111,NoMalwares
+IP-ASN,53808,NoMalwares
+IP-ASN,54625,NoMalwares
+IP-ASN,60539,NoMalwares
+IP-ASN,60842,NoMalwares
+IP-ASN,61302,NoMalwares
+IP-ASN,62489,NoMalwares
+IP-ASN,62853,NoMalwares
+IP-ASN,7257,NoMalwares
+IP-ASN,7480,NoMalwares
+IP-ASN,7719,NoMalwares
+IP-ASN,945,NoMalwares
+IP-CIDR,0.0.0.0/24,NoMalwares
+IP-CIDR,1.13.116.46/32,NoMalwares
+IP-CIDR,1.13.117.181/32,NoMalwares
+IP-CIDR,1.13.12.27/32,NoMalwares
+IP-CIDR,1.13.129.76/32,NoMalwares
+IP-CIDR,1.28.8.219/32,NoMalwares
+IP-CIDR,1.28.8.220/32,NoMalwares
+IP-CIDR,10.72.25.0/24,NoMalwares
+IP-CIDR,100.20.104.229/32,NoMalwares
+IP-CIDR,100.20.13.49/32,NoMalwares
+IP-CIDR,100.28.19.138/32,NoMalwares
+IP-CIDR,101.132.183.67/32,NoMalwares
+IP-CIDR,101.226.10.8/32,NoMalwares
+IP-CIDR,101.227.200.11/32,NoMalwares
+IP-CIDR,101.227.200.28/32,NoMalwares
+IP-CIDR,101.227.97.240/32,NoMalwares
+IP-CIDR,101.73.101.228/32,NoMalwares
+IP-CIDR,101.91.140.124/32,NoMalwares
+IP-CIDR,101.91.140.224/32,NoMalwares
+IP-CIDR,103.155.214.207/32,NoMalwares
+IP-CIDR,103.224.182.210/32,NoMalwares
+IP-CIDR,103.224.182.251/32,NoMalwares
+IP-CIDR,103.224.212.249/32,NoMalwares
+IP-CIDR,103.49.209.27/32,NoMalwares
+IP-CIDR,103.67.200.64/32,NoMalwares
+IP-CIDR,104.239.213.7/32,NoMalwares
+IP-CIDR,106.11.211.236/32,NoMalwares
+IP-CIDR,106.11.226.222/32,NoMalwares
+IP-CIDR,106.11.226.57/32,NoMalwares
+IP-CIDR,106.11.232.126/32,NoMalwares
+IP-CIDR,106.11.232.154/32,NoMalwares
+IP-CIDR,106.11.232.157/32,NoMalwares
+IP-CIDR,106.11.232.176/32,NoMalwares
+IP-CIDR,106.11.232.185/32,NoMalwares
+IP-CIDR,106.11.232.199/32,NoMalwares
+IP-CIDR,106.11.232.21/32,NoMalwares
+IP-CIDR,106.11.232.233/32,NoMalwares
+IP-CIDR,106.11.232.247/32,NoMalwares
+IP-CIDR,106.11.232.249/32,NoMalwares
+IP-CIDR,106.11.25.175/32,NoMalwares
+IP-CIDR,106.11.25.239/32,NoMalwares
+IP-CIDR,106.11.45.35/32,NoMalwares
+IP-CIDR,106.39.206.21/32,NoMalwares
+IP-CIDR,106.39.206.25/32,NoMalwares
+IP-CIDR,106.39.206.70/32,NoMalwares
+IP-CIDR,106.75.231.48/32,NoMalwares
+IP-CIDR,107.161.189.164/32,NoMalwares
+IP-CIDR,108.170.31.123/32,NoMalwares
+IP-CIDR,108.170.52.156/32,NoMalwares
+IP-CIDR,108.61.99.63/32,NoMalwares
+IP-CIDR,109.123.233.251/32,NoMalwares
+IP-CIDR,109.201.135.46/32,NoMalwares
+IP-CIDR,109.206.163.112/32,NoMalwares
+IP-CIDR,109.206.163.116/32,NoMalwares
+IP-CIDR,109.206.175.252/32,NoMalwares
+IP-CIDR,109.206.175.85/32,NoMalwares
+IP-CIDR,109.206.176.75/32,NoMalwares
+IP-CIDR,109.206.181.2/32,NoMalwares
+IP-CIDR,109.206.191.198/32,NoMalwares
+IP-CIDR,109.230.237.116/32,NoMalwares
+IP-CIDR,110.93.143.144/32,NoMalwares
+IP-CIDR,111.11.208.2/32,NoMalwares
+IP-CIDR,111.124.64.219/32,NoMalwares
+IP-CIDR,111.132.33.172/32,NoMalwares
+IP-CIDR,111.132.33.173/32,NoMalwares
+IP-CIDR,111.132.44.109/32,NoMalwares
+IP-CIDR,111.132.44.110/32,NoMalwares
+IP-CIDR,111.175.220.163/32,NoMalwares
+IP-CIDR,111.175.220.164/32,NoMalwares
+IP-CIDR,111.175.221.58/32,NoMalwares
+IP-CIDR,111.180.200.51/32,NoMalwares
+IP-CIDR,111.180.200.52/32,NoMalwares
+IP-CIDR,111.19.193.49/32,NoMalwares
+IP-CIDR,111.19.193.50/32,NoMalwares
+IP-CIDR,111.20.22.225/32,NoMalwares
+IP-CIDR,111.206.147.156/32,NoMalwares
+IP-CIDR,111.206.147.210/32,NoMalwares
+IP-CIDR,111.206.148.27/32,NoMalwares
+IP-CIDR,111.31.201.194/32,NoMalwares
+IP-CIDR,111.31.241.140/32,NoMalwares
+IP-CIDR,111.31.241.76/32,NoMalwares
+IP-CIDR,111.31.37.237/32,NoMalwares
+IP-CIDR,111.31.37.238/32,NoMalwares
+IP-CIDR,111.32.130.242/32,NoMalwares
+IP-CIDR,111.32.210.204/32,NoMalwares
+IP-CIDR,111.45.76.225/32,NoMalwares
+IP-CIDR,111.45.76.226/32,NoMalwares
+IP-CIDR,111.51.89.232/32,NoMalwares
+IP-CIDR,112.132.230.179/32,NoMalwares
+IP-CIDR,112.64.218.119/32,NoMalwares
+IP-CIDR,112.65.200.117/32,NoMalwares
+IP-CIDR,112.85.251.158/32,NoMalwares
+IP-CIDR,113.12.83.4/31,NoMalwares
+IP-CIDR,113.240.96.121/32,NoMalwares
+IP-CIDR,113.240.96.122/32,NoMalwares
+IP-CIDR,114.112.163.232/32,NoMalwares
+IP-CIDR,114.112.163.254/32,NoMalwares
+IP-CIDR,114.116.215.110/32,NoMalwares
+IP-CIDR,114.247.28.96/32,NoMalwares
+IP-CIDR,114.55.236.88/32,NoMalwares
+IP-CIDR,115.182.16.79/32,NoMalwares
+IP-CIDR,115.231.187.54/32,NoMalwares
+IP-CIDR,116.130.224.150/32,NoMalwares
+IP-CIDR,116.130.224.205/32,NoMalwares
+IP-CIDR,116.142.245.227/32,NoMalwares
+IP-CIDR,116.63.10.135/32,NoMalwares
+IP-CIDR,116.63.10.31/32,NoMalwares
+IP-CIDR,117.144.238.29/32,NoMalwares
+IP-CIDR,117.185.228.108/32,NoMalwares
+IP-CIDR,117.85.70.222/32,NoMalwares
+IP-CIDR,118.144.88.126/32,NoMalwares
+IP-CIDR,118.144.88.215/32,NoMalwares
+IP-CIDR,118.253.173.213/32,NoMalwares
+IP-CIDR,118.253.173.214/32,NoMalwares
+IP-CIDR,119.167.164.109/32,NoMalwares
+IP-CIDR,119.167.164.110/32,NoMalwares
+IP-CIDR,119.188.213.93/32,NoMalwares
+IP-CIDR,119.249.48.11/32,NoMalwares
+IP-CIDR,119.249.48.12/32,NoMalwares
+IP-CIDR,119.4.249.166/32,NoMalwares
+IP-CIDR,119.45.2.92/32,NoMalwares
+IP-CIDR,119.45.249.52/32,NoMalwares
+IP-CIDR,120.192.83.163/32,NoMalwares
+IP-CIDR,120.195.183.117/32,NoMalwares
+IP-CIDR,120.195.183.118/32,NoMalwares
+IP-CIDR,120.209.138.64/32,NoMalwares
+IP-CIDR,120.232.51.247/32,NoMalwares
+IP-CIDR,120.233.175.250/32,NoMalwares
+IP-CIDR,120.233.175.251/32,NoMalwares
+IP-CIDR,120.233.177.219/32,NoMalwares
+IP-CIDR,120.233.177.220/32,NoMalwares
+IP-CIDR,120.233.206.27/32,NoMalwares
+IP-CIDR,120.233.23.103/32,NoMalwares
+IP-CIDR,120.233.4.189/32,NoMalwares
+IP-CIDR,120.233.4.190/32,NoMalwares
+IP-CIDR,120.233.40.117/32,NoMalwares
+IP-CIDR,120.233.40.118/32,NoMalwares
+IP-CIDR,120.240.228.199/32,NoMalwares
+IP-CIDR,120.240.230.243/32,NoMalwares
+IP-CIDR,120.240.55.205/32,NoMalwares
+IP-CIDR,120.76.189.132/32,NoMalwares
+IP-CIDR,121.17.122.71/32,NoMalwares
+IP-CIDR,121.17.123.119/32,NoMalwares
+IP-CIDR,121.17.123.120/32,NoMalwares
+IP-CIDR,121.17.123.250/32,NoMalwares
+IP-CIDR,121.17.123.251/32,NoMalwares
+IP-CIDR,121.228.130.243/32,NoMalwares
+IP-CIDR,121.228.130.244/32,NoMalwares
+IP-CIDR,122.193.246.202/32,NoMalwares
+IP-CIDR,122.9.13.79/32,NoMalwares
+IP-CIDR,122.9.15.129/32,NoMalwares
+IP-CIDR,122.9.7.134/32,NoMalwares
+IP-CIDR,123.125.81.12/32,NoMalwares
+IP-CIDR,123.129.254.11/32,NoMalwares
+IP-CIDR,123.129.254.12/30,NoMalwares
+IP-CIDR,123.129.254.16/30,NoMalwares
+IP-CIDR,123.151.48.171/32,NoMalwares
+IP-CIDR,123.151.48.193/32,NoMalwares
+IP-CIDR,123.151.48.208/32,NoMalwares
+IP-CIDR,123.234.2.206/32,NoMalwares
+IP-CIDR,123.56.152.96/32,NoMalwares
+IP-CIDR,124.14.21.147/32,NoMalwares
+IP-CIDR,124.14.21.151/32,NoMalwares
+IP-CIDR,124.192.153.42/32,NoMalwares
+IP-CIDR,124.232.132.94/32,NoMalwares
+IP-CIDR,124.232.160.178/32,NoMalwares
+IP-CIDR,124.239.239.16/32,NoMalwares
+IP-CIDR,124.239.239.178/32,NoMalwares
+IP-CIDR,124.95.160.239/32,NoMalwares
+IP-CIDR,124.95.172.71/32,NoMalwares
+IP-CIDR,124.95.172.72/32,NoMalwares
+IP-CIDR,125.211.213.130/31,NoMalwares
+IP-CIDR,125.211.213.132/31,NoMalwares
+IP-CIDR,125.211.213.134/32,NoMalwares
+IP-CIDR,125.76.239.244/31,NoMalwares
+IP-CIDR,13.248.148.254/32,NoMalwares
+IP-CIDR,132.148.220.142/32,NoMalwares
+IP-CIDR,134.209.136.174/32,NoMalwares
+IP-CIDR,138.128.161.250/31,NoMalwares
+IP-CIDR,138.128.161.252/31,NoMalwares
+IP-CIDR,138.68.252.54/32,NoMalwares
+IP-CIDR,139.45.195.9/32,NoMalwares
+IP-CIDR,139.45.197.106/32,NoMalwares
+IP-CIDR,139.45.197.168/32,NoMalwares
+IP-CIDR,139.45.197.236/32,NoMalwares
+IP-CIDR,139.45.197.244/32,NoMalwares
+IP-CIDR,139.99.239.47/32,NoMalwares
+IP-CIDR,139.99.254.243/32,NoMalwares
+IP-CIDR,139.99.254.244/31,NoMalwares
+IP-CIDR,139.99.254.246/32,NoMalwares
+IP-CIDR,140.249.108.209/32,NoMalwares
+IP-CIDR,142.147.98.208/32,NoMalwares
+IP-CIDR,144.76.0.242/32,NoMalwares
+IP-CIDR,144.76.1.130/32,NoMalwares
+IP-CIDR,146.19.169.98/31,NoMalwares
+IP-CIDR,147.135.16.27/32,NoMalwares
+IP-CIDR,147.135.253.55/32,NoMalwares
+IP-CIDR,147.93.63.211/32,NoMalwares
+IP-CIDR,149.30.232.154/32,NoMalwares
+IP-CIDR,15.197.244.48/32,NoMalwares
+IP-CIDR,150.138.40.236/32,NoMalwares
+IP-CIDR,150.138.40.237/32,NoMalwares
+IP-CIDR,151.236.60.142/32,NoMalwares
+IP-CIDR,153.35.173.177/32,NoMalwares
+IP-CIDR,153.35.173.178/32,NoMalwares
+IP-CIDR,154.199.255.184/32,NoMalwares
+IP-CIDR,154.204.32.99/32,NoMalwares
+IP-CIDR,154.223.16.232/32,NoMalwares
+IP-CIDR,154.7.80.158/32,NoMalwares
+IP-CIDR,156.233.32.123/32,NoMalwares
+IP-CIDR,156.245.23.49/32,NoMalwares
+IP-CIDR,157.148.61.231/32,NoMalwares
+IP-CIDR,157.148.62.186/32,NoMalwares
+IP-CIDR,157.90.183.248/32,NoMalwares
+IP-CIDR,157.90.71.190/32,NoMalwares
+IP-CIDR,158.247.212.220/32,NoMalwares
+IP-CIDR,159.100.22.89/32,NoMalwares
+IP-CIDR,162.241.124.200/32,NoMalwares
+IP-CIDR,162.252.214.4/32,NoMalwares
+IP-CIDR,163.172.41.31/32,NoMalwares
+IP-CIDR,163.177.180.118/32,NoMalwares
+IP-CIDR,163.177.182.93/32,NoMalwares
+IP-CIDR,163.179.228.118/32,NoMalwares
+IP-CIDR,163.179.228.119/32,NoMalwares
+IP-CIDR,164.132.74.156/32,NoMalwares
+IP-CIDR,165.227.168.212/32,NoMalwares
+IP-CIDR,167.206.10.148/32,NoMalwares
+IP-CIDR,167.235.163.216/32,NoMalwares
+IP-CIDR,167.99.249.47/32,NoMalwares
+IP-CIDR,169.254.169.254/32,NoMalwares
+IP-CIDR,171.43.164.220/32,NoMalwares
+IP-CIDR,171.43.165.220/32,NoMalwares
+IP-CIDR,171.43.166.240/32,NoMalwares
+IP-CIDR,172.240.108.68/32,NoMalwares
+IP-CIDR,172.240.108.76/32,NoMalwares
+IP-CIDR,172.240.108.84/32,NoMalwares
+IP-CIDR,172.240.127.234/32,NoMalwares
+IP-CIDR,172.240.253.132/32,NoMalwares
+IP-CIDR,172.240.41.129/32,NoMalwares
+IP-CIDR,172.240.41.32/31,NoMalwares
+IP-CIDR,172.240.41.64/31,NoMalwares
+IP-CIDR,172.240.41.96/31,NoMalwares
+IP-CIDR,172.245.1.36/32,NoMalwares
+IP-CIDR,172.245.1.38/32,NoMalwares
+IP-CIDR,173.255.194.134/32,NoMalwares
+IP-CIDR,175.12.100.199/32,NoMalwares
+IP-CIDR,175.12.100.200/32,NoMalwares
+IP-CIDR,175.22.9.199/32,NoMalwares
+IP-CIDR,175.22.9.200/32,NoMalwares
+IP-CIDR,175.6.223.15/32,NoMalwares
+IP-CIDR,176.111.174.118/32,NoMalwares
+IP-CIDR,176.113.115.191/32,NoMalwares
+IP-CIDR,176.117.68.141/32,NoMalwares
+IP-CIDR,178.128.142.109/32,NoMalwares
+IP-CIDR,178.162.203.202/32,NoMalwares
+IP-CIDR,178.162.203.211/32,NoMalwares
+IP-CIDR,178.162.203.226/32,NoMalwares
+IP-CIDR,178.162.217.107/32,NoMalwares
+IP-CIDR,178.238.235.145/32,NoMalwares
+IP-CIDR,178.63.5.120/32,NoMalwares
+IP-CIDR,180.153.103.224/32,NoMalwares
+IP-CIDR,180.163.145.236/32,NoMalwares
+IP-CIDR,180.163.145.237/32,NoMalwares
+IP-CIDR,180.163.147.212/32,NoMalwares
+IP-CIDR,180.163.147.213/32,NoMalwares
+IP-CIDR,180.166.52.24/32,NoMalwares
+IP-CIDR,180.168.41.175/32,NoMalwares
+IP-CIDR,180.76.2.18/32,NoMalwares
+IP-CIDR,180.97.214.185/32,NoMalwares
+IP-CIDR,182.140.130.239/32,NoMalwares
+IP-CIDR,182.140.130.240/32,NoMalwares
+IP-CIDR,182.140.142.231/32,NoMalwares
+IP-CIDR,182.140.147.207/32,NoMalwares
+IP-CIDR,182.201.241.91/32,NoMalwares
+IP-CIDR,182.40.32.118/32,NoMalwares
+IP-CIDR,183.201.217.197/32,NoMalwares
+IP-CIDR,183.201.217.198/32,NoMalwares
+IP-CIDR,183.201.221.252/32,NoMalwares
+IP-CIDR,183.201.221.253/32,NoMalwares
+IP-CIDR,183.207.232.253/32,NoMalwares
+IP-CIDR,183.221.242.172/32,NoMalwares
+IP-CIDR,183.221.250.11/32,NoMalwares
+IP-CIDR,183.224.40.24/32,NoMalwares
+IP-CIDR,183.240.127.205/32,NoMalwares
+IP-CIDR,183.240.72.231/32,NoMalwares
+IP-CIDR,183.240.82.239/32,NoMalwares
+IP-CIDR,183.240.84.201/32,NoMalwares
+IP-CIDR,183.47.118.206/32,NoMalwares
+IP-CIDR,183.47.121.33/32,NoMalwares
+IP-CIDR,183.59.53.237/32,NoMalwares
+IP-CIDR,184.106.248.76/32,NoMalwares
+IP-CIDR,185.106.94.139/32,NoMalwares
+IP-CIDR,185.149.120.173/32,NoMalwares
+IP-CIDR,185.165.169.108/32,NoMalwares
+IP-CIDR,185.169.99.112/32,NoMalwares
+IP-CIDR,185.193.38.148/32,NoMalwares
+IP-CIDR,185.196.9.214/32,NoMalwares
+IP-CIDR,185.196.9.222/32,NoMalwares
+IP-CIDR,185.246.188.124/31,NoMalwares
+IP-CIDR,185.38.149.111/32,NoMalwares
+IP-CIDR,185.53.177.50/31,NoMalwares
+IP-CIDR,185.53.177.52/31,NoMalwares
+IP-CIDR,185.53.177.54/32,NoMalwares
+IP-CIDR,185.53.178.50/31,NoMalwares
+IP-CIDR,185.53.178.52/31,NoMalwares
+IP-CIDR,185.53.178.54/32,NoMalwares
+IP-CIDR,185.68.16.189/32,NoMalwares
+IP-CIDR,185.87.148.199/32,NoMalwares
+IP-CIDR,188.72.219.35/32,NoMalwares
+IP-CIDR,188.72.219.36/32,NoMalwares
+IP-CIDR,191.96.224.140/32,NoMalwares
+IP-CIDR,192.142.110.7/32,NoMalwares
+IP-CIDR,192.142.110.8/30,NoMalwares
+IP-CIDR,192.151.218.66/32,NoMalwares
+IP-CIDR,192.186.132.66/32,NoMalwares
+IP-CIDR,192.186.156.13/32,NoMalwares
+IP-CIDR,192.186.156.14/32,NoMalwares
+IP-CIDR,192.186.156.27/32,NoMalwares
+IP-CIDR,192.186.156.3/32,NoMalwares
+IP-CIDR,192.186.156.8/32,NoMalwares
+IP-CIDR,192.243.59.12/31,NoMalwares
+IP-CIDR,192.243.59.20/32,NoMalwares
+IP-CIDR,192.243.61.225/32,NoMalwares
+IP-CIDR,192.243.61.227/32,NoMalwares
+IP-CIDR,193.124.185.42/32,NoMalwares
+IP-CIDR,193.143.1.214/32,NoMalwares
+IP-CIDR,193.143.1.217/32,NoMalwares
+IP-CIDR,193.143.1.45/32,NoMalwares
+IP-CIDR,193.188.192.196/32,NoMalwares
+IP-CIDR,193.200.64.24/32,NoMalwares
+IP-CIDR,193.200.64.30/31,NoMalwares
+IP-CIDR,193.200.65.61/32,NoMalwares
+IP-CIDR,193.29.12.90/32,NoMalwares
+IP-CIDR,193.32.161.58/32,NoMalwares
+IP-CIDR,193.32.161.61/32,NoMalwares
+IP-CIDR,193.32.161.62/31,NoMalwares
+IP-CIDR,193.34.144.235/32,NoMalwares
+IP-CIDR,193.37.152.80/32,NoMalwares
+IP-CIDR,194.180.36.92/30,NoMalwares
+IP-CIDR,194.180.36.96/32,NoMalwares
+IP-CIDR,194.59.220.161/32,NoMalwares
+IP-CIDR,194.63.140.103/32,NoMalwares
+IP-CIDR,194.63.143.61/32,NoMalwares
+IP-CIDR,194.63.143.96/32,NoMalwares
+IP-CIDR,195.201.253.130/31,NoMalwares
+IP-CIDR,195.201.92.254/32,NoMalwares
+IP-CIDR,198.105.254.11/32,NoMalwares
+IP-CIDR,198.12.86.90/32,NoMalwares
+IP-CIDR,198.134.116.17/32,NoMalwares
+IP-CIDR,198.134.116.30/32,NoMalwares
+IP-CIDR,198.251.82.186/32,NoMalwares
+IP-CIDR,198.58.118.167/32,NoMalwares
+IP-CIDR,199.59.243.222/32,NoMalwares
+IP-CIDR,2.87.160.7/32,NoMalwares
+IP-CIDR,200.72.40.46/32,NoMalwares
+IP-CIDR,202.100.220.54/32,NoMalwares
+IP-CIDR,202.100.68.117/32,NoMalwares
+IP-CIDR,202.102.110.203/32,NoMalwares
+IP-CIDR,202.102.110.204/31,NoMalwares
+IP-CIDR,202.106.199.34/31,NoMalwares
+IP-CIDR,202.106.199.36/31,NoMalwares
+IP-CIDR,202.106.199.38/32,NoMalwares
+IP-CIDR,202.98.24.121/32,NoMalwares
+IP-CIDR,202.98.24.122/31,NoMalwares
+IP-CIDR,202.98.24.124/31,NoMalwares
+IP-CIDR,202.99.254.230/31,NoMalwares
+IP-CIDR,202.99.254.232/32,NoMalwares
+IP-CIDR,203.107.1.1/32,NoMalwares
+IP-CIDR,203.107.1.33/32,NoMalwares
+IP-CIDR,203.107.1.34/32,NoMalwares
+IP-CIDR,203.107.1.35/32,NoMalwares
+IP-CIDR,203.107.1.65/32,NoMalwares
+IP-CIDR,203.119.204.148/32,NoMalwares
+IP-CIDR,203.119.204.17/32,NoMalwares
+IP-CIDR,203.119.204.182/32,NoMalwares
+IP-CIDR,203.119.204.195/32,NoMalwares
+IP-CIDR,203.119.204.34/32,NoMalwares
+IP-CIDR,203.119.204.35/32,NoMalwares
+IP-CIDR,203.119.204.5/32,NoMalwares
+IP-CIDR,203.119.204.90/32,NoMalwares
+IP-CIDR,203.119.204.99/32,NoMalwares
+IP-CIDR,203.119.238.112/32,NoMalwares
+IP-CIDR,203.119.238.118/32,NoMalwares
+IP-CIDR,203.119.238.15/32,NoMalwares
+IP-CIDR,203.119.238.163/32,NoMalwares
+IP-CIDR,203.119.238.194/32,NoMalwares
+IP-CIDR,203.119.238.228/32,NoMalwares
+IP-CIDR,203.119.238.233/32,NoMalwares
+IP-CIDR,203.119.238.234/32,NoMalwares
+IP-CIDR,203.119.238.239/32,NoMalwares
+IP-CIDR,203.119.238.240/32,NoMalwares
+IP-CIDR,203.119.238.25/32,NoMalwares
+IP-CIDR,203.119.238.35/32,NoMalwares
+IP-CIDR,203.119.238.48/32,NoMalwares
+IP-CIDR,203.119.238.63/32,NoMalwares
+IP-CIDR,203.119.238.70/32,NoMalwares
+IP-CIDR,203.119.238.98/32,NoMalwares
+IP-CIDR,203.119.252.4/32,NoMalwares
+IP-CIDR,205.209.138.102/32,NoMalwares
+IP-CIDR,206.119.178.163/32,NoMalwares
+IP-CIDR,206.54.181.250/32,NoMalwares
+IP-CIDR,207.148.44.179/32,NoMalwares
+IP-CIDR,208.91.189.203/32,NoMalwares
+IP-CIDR,211.136.113.1/32,NoMalwares
+IP-CIDR,211.137.130.101/32,NoMalwares
+IP-CIDR,211.138.102.198/32,NoMalwares
+IP-CIDR,211.138.74.132/32,NoMalwares
+IP-CIDR,211.139.136.73/32,NoMalwares
+IP-CIDR,211.98.70.226/31,NoMalwares
+IP-CIDR,211.98.71.195/32,NoMalwares
+IP-CIDR,212.117.190.201/32,NoMalwares
+IP-CIDR,212.117.190.202/32,NoMalwares
+IP-CIDR,212.117.190.210/31,NoMalwares
+IP-CIDR,212.117.190.212/31,NoMalwares
+IP-CIDR,212.129.11.38/32,NoMalwares
+IP-CIDR,212.129.3.145/32,NoMalwares
+IP-CIDR,212.129.6.248/32,NoMalwares
+IP-CIDR,212.27.60.108/32,NoMalwares
+IP-CIDR,212.64.119.24/32,NoMalwares
+IP-CIDR,212.83.189.206/32,NoMalwares
+IP-CIDR,212.83.189.252/32,NoMalwares
+IP-CIDR,212.83.190.41/32,NoMalwares
+IP-CIDR,213.202.211.30/32,NoMalwares
+IP-CIDR,213.202.211.38/32,NoMalwares
+IP-CIDR,213.227.145.147/32,NoMalwares
+IP-CIDR,213.227.149.216/32,NoMalwares
+IP-CIDR,216.245.211.18/32,NoMalwares
+IP-CIDR,216.245.216.178/31,NoMalwares
+IP-CIDR,216.245.216.180/31,NoMalwares
+IP-CIDR,216.245.216.182/32,NoMalwares
+IP-CIDR,216.246.30.80/30,NoMalwares
+IP-CIDR,216.246.30.84/32,NoMalwares
+IP-CIDR,218.244.156.23/32,NoMalwares
+IP-CIDR,218.28.144.36/30,NoMalwares
+IP-CIDR,218.28.144.40/31,NoMalwares
+IP-CIDR,218.28.144.42/32,NoMalwares
+IP-CIDR,218.30.64.194/32,NoMalwares
+IP-CIDR,218.68.250.117/32,NoMalwares
+IP-CIDR,218.68.250.118/31,NoMalwares
+IP-CIDR,218.68.250.120/31,NoMalwares
+IP-CIDR,218.93.127.37/32,NoMalwares
+IP-CIDR,219.146.13.36/32,NoMalwares
+IP-CIDR,220.115.251.25/32,NoMalwares
+IP-CIDR,220.165.8.172/32,NoMalwares
+IP-CIDR,220.165.8.174/32,NoMalwares
+IP-CIDR,220.181.164.197/32,NoMalwares
+IP-CIDR,220.181.164.198/32,NoMalwares
+IP-CIDR,220.181.165.88/32,NoMalwares
+IP-CIDR,220.181.183.237/32,NoMalwares
+IP-CIDR,220.185.164.195/32,NoMalwares
+IP-CIDR,220.185.168.92/32,NoMalwares
+IP-CIDR,220.185.168.93/32,NoMalwares
+IP-CIDR,220.196.52.141/32,NoMalwares
+IP-CIDR,220.250.64.18/31,NoMalwares
+IP-CIDR,220.250.64.20/30,NoMalwares
+IP-CIDR,220.250.64.225/32,NoMalwares
+IP-CIDR,220.250.64.226/31,NoMalwares
+IP-CIDR,220.250.64.228/32,NoMalwares
+IP-CIDR,220.250.64.24/30,NoMalwares
+IP-CIDR,220.250.64.28/31,NoMalwares
+IP-CIDR,220.250.64.30/32,NoMalwares
+IP-CIDR,221.179.131.72/32,NoMalwares
+IP-CIDR,221.179.140.145/32,NoMalwares
+IP-CIDR,221.179.46.190/32,NoMalwares
+IP-CIDR,221.179.46.194/32,NoMalwares
+IP-CIDR,221.192.153.41/32,NoMalwares
+IP-CIDR,221.192.153.42/31,NoMalwares
+IP-CIDR,221.192.153.44/31,NoMalwares
+IP-CIDR,221.192.153.46/32,NoMalwares
+IP-CIDR,221.192.153.49/32,NoMalwares
+IP-CIDR,221.194.147.200/32,NoMalwares
+IP-CIDR,221.195.209.71/32,NoMalwares
+IP-CIDR,221.204.244.36/30,NoMalwares
+IP-CIDR,221.204.244.40/31,NoMalwares
+IP-CIDR,221.228.17.152/32,NoMalwares
+IP-CIDR,221.228.32.13/32,NoMalwares
+IP-CIDR,221.229.203.219/32,NoMalwares
+IP-CIDR,221.231.6.79/32,NoMalwares
+IP-CIDR,221.231.92.219/32,NoMalwares
+IP-CIDR,221.6.4.148/32,NoMalwares
+IP-CIDR,222.186.17.226/32,NoMalwares
+IP-CIDR,222.186.61.91/32,NoMalwares
+IP-CIDR,222.186.61.95/32,NoMalwares
+IP-CIDR,222.186.61.96/31,NoMalwares
+IP-CIDR,222.221.5.204/32,NoMalwares
+IP-CIDR,222.221.5.252/31,NoMalwares
+IP-CIDR,222.73.156.235/32,NoMalwares
+IP-CIDR,222.73.33.223/32,NoMalwares
+IP-CIDR,222.73.33.224/32,NoMalwares
+IP-CIDR,223.111.170.199/32,NoMalwares
+IP-CIDR,223.5.5.5/32,NoMalwares
+IP-CIDR,223.6.6.6/32,NoMalwares
+IP-CIDR,223.82.248.117/32,NoMalwares
+IP-CIDR,23.109.87.170/32,NoMalwares
+IP-CIDR,23.111.31.137/32,NoMalwares
+IP-CIDR,23.111.88.207/32,NoMalwares
+IP-CIDR,23.170.252.196/32,NoMalwares
+IP-CIDR,23.202.231.167/32,NoMalwares
+IP-CIDR,23.217.138.108/32,NoMalwares
+IP-CIDR,23.224.89.2/32,NoMalwares
+IP-CIDR,23.229.68.43/32,NoMalwares
+IP-CIDR,23.229.68.44/30,NoMalwares
+IP-CIDR,23.229.69.124/32,NoMalwares
+IP-CIDR,23.229.70.48/32,NoMalwares
+IP-CIDR,23.231.151.252/32,NoMalwares
+IP-CIDR,23.82.169.37/32,NoMalwares
+IP-CIDR,23.82.169.38/31,NoMalwares
+IP-CIDR,23.82.169.40/31,NoMalwares
+IP-CIDR,23.83.114.131/32,NoMalwares
+IP-CIDR,23.94.86.123/32,NoMalwares
+IP-CIDR,27.159.77.195/32,NoMalwares
+IP-CIDR,27.159.77.196/32,NoMalwares
+IP-CIDR,27.221.78.204/32,NoMalwares
+IP-CIDR,27.222.20.220/32,NoMalwares
+IP-CIDR,3.216.243.46/32,NoMalwares
+IP-CIDR,3.220.51.12/32,NoMalwares
+IP-CIDR,3.226.8.132/32,NoMalwares
+IP-CIDR,31.14.252.148/32,NoMalwares
+IP-CIDR,31.220.27.134/32,NoMalwares
+IP-CIDR,34.195.224.242/32,NoMalwares
+IP-CIDR,34.204.214.165/32,NoMalwares
+IP-CIDR,34.215.155.61/32,NoMalwares
+IP-CIDR,34.230.160.215/32,NoMalwares
+IP-CIDR,35.194.26.233/32,NoMalwares
+IP-CIDR,35.224.227.218/32,NoMalwares
+IP-CIDR,35.238.205.163/32,NoMalwares
+IP-CIDR,35.239.57.233/32,NoMalwares
+IP-CIDR,36.150.239.241/32,NoMalwares
+IP-CIDR,36.150.239.242/32,NoMalwares
+IP-CIDR,36.151.162.215/32,NoMalwares
+IP-CIDR,36.151.162.216/32,NoMalwares
+IP-CIDR,36.156.169.75/32,NoMalwares
+IP-CIDR,37.1.213.100/32,NoMalwares
+IP-CIDR,37.220.26.135/32,NoMalwares
+IP-CIDR,37.220.26.136/31,NoMalwares
+IP-CIDR,37.34.176.37/32,NoMalwares
+IP-CIDR,38.180.96.244/32,NoMalwares
+IP-CIDR,39.107.15.115/32,NoMalwares
+IP-CIDR,39.156.140.245/32,NoMalwares
+IP-CIDR,39.156.140.30/32,NoMalwares
+IP-CIDR,39.156.140.47/32,NoMalwares
+IP-CIDR,42.123.125.237/32,NoMalwares
+IP-CIDR,42.192.255.234/32,NoMalwares
+IP-CIDR,42.59.4.119/32,NoMalwares
+IP-CIDR,42.59.4.120/32,NoMalwares
+IP-CIDR,42.59.4.223/32,NoMalwares
+IP-CIDR,43.100.125.58/32,NoMalwares
+IP-CIDR,43.128.142.70/32,NoMalwares
+IP-CIDR,43.145.41.107/32,NoMalwares
+IP-CIDR,43.159.140.215/32,NoMalwares
+IP-CIDR,43.162.119.45/32,NoMalwares
+IP-CIDR,44.223.210.42/32,NoMalwares
+IP-CIDR,44.228.230.225/32,NoMalwares
+IP-CIDR,44.228.85.26/32,NoMalwares
+IP-CIDR,44.236.213.34/32,NoMalwares
+IP-CIDR,45.136.49.35/32,NoMalwares
+IP-CIDR,45.15.156.210/32,NoMalwares
+IP-CIDR,45.202.32.3/32,NoMalwares
+IP-CIDR,45.32.105.134/32,NoMalwares
+IP-CIDR,45.33.18.44/32,NoMalwares
+IP-CIDR,45.33.2.79/32,NoMalwares
+IP-CIDR,45.33.20.235/32,NoMalwares
+IP-CIDR,45.33.23.183/32,NoMalwares
+IP-CIDR,45.33.30.197/32,NoMalwares
+IP-CIDR,45.56.79.23/32,NoMalwares
+IP-CIDR,45.79.19.196/32,NoMalwares
+IP-CIDR,45.8.92.138/32,NoMalwares
+IP-CIDR,45.82.68.79/32,NoMalwares
+IP-CIDR,45.90.109.196/32,NoMalwares
+IP-CIDR,45.90.58.90/32,NoMalwares
+IP-CIDR,46.101.81.149/32,NoMalwares
+IP-CIDR,47.101.67.88/32,NoMalwares
+IP-CIDR,47.76.132.29/32,NoMalwares
+IP-CIDR,47.89.59.182/32,NoMalwares
+IP-CIDR,47.96.157.8/32,NoMalwares
+IP-CIDR,47.97.64.97/32,NoMalwares
+IP-CIDR,47.97.66.48/32,NoMalwares
+IP-CIDR,5.188.62.36/32,NoMalwares
+IP-CIDR,5.61.55.143/32,NoMalwares
+IP-CIDR,5.79.71.205/32,NoMalwares
+IP-CIDR,5.79.71.225/32,NoMalwares
+IP-CIDR,5.8.34.26/32,NoMalwares
+IP-CIDR,5.8.47.3/32,NoMalwares
+IP-CIDR,50.112.124.170/32,NoMalwares
+IP-CIDR,51.15.3.223/32,NoMalwares
+IP-CIDR,51.178.76.105/32,NoMalwares
+IP-CIDR,51.91.66.125/32,NoMalwares
+IP-CIDR,52.202.53.245/32,NoMalwares
+IP-CIDR,52.204.19.219/32,NoMalwares
+IP-CIDR,52.24.156.12/32,NoMalwares
+IP-CIDR,52.25.6.134/32,NoMalwares
+IP-CIDR,52.9.43.57/32,NoMalwares
+IP-CIDR,54.174.156.141/32,NoMalwares
+IP-CIDR,54.205.83.61/32,NoMalwares
+IP-CIDR,54.209.22.226/32,NoMalwares
+IP-CIDR,54.210.193.115/32,NoMalwares
+IP-CIDR,54.219.218.169/32,NoMalwares
+IP-CIDR,54.222.186.106/32,NoMalwares
+IP-CIDR,54.225.185.110/32,NoMalwares
+IP-CIDR,54.85.113.62/32,NoMalwares
+IP-CIDR,54.91.125.197/32,NoMalwares
+IP-CIDR,57.128.71.215/32,NoMalwares
+IP-CIDR,59.82.118.156/32,NoMalwares
+IP-CIDR,59.82.118.157/32,NoMalwares
+IP-CIDR,59.82.120.124/32,NoMalwares
+IP-CIDR,59.82.120.166/32,NoMalwares
+IP-CIDR,59.82.120.171/32,NoMalwares
+IP-CIDR,59.82.120.210/32,NoMalwares
+IP-CIDR,59.82.120.252/32,NoMalwares
+IP-CIDR,59.82.120.33/32,NoMalwares
+IP-CIDR,59.82.121.14/32,NoMalwares
+IP-CIDR,59.82.121.172/32,NoMalwares
+IP-CIDR,59.82.121.181/32,NoMalwares
+IP-CIDR,59.82.121.213/32,NoMalwares
+IP-CIDR,59.82.121.215/32,NoMalwares
+IP-CIDR,59.82.121.216/32,NoMalwares
+IP-CIDR,59.82.121.222/32,NoMalwares
+IP-CIDR,59.82.121.227/32,NoMalwares
+IP-CIDR,59.82.121.3/32,NoMalwares
+IP-CIDR,59.82.121.72/32,NoMalwares
+IP-CIDR,59.82.122.238/32,NoMalwares
+IP-CIDR,59.82.122.36/32,NoMalwares
+IP-CIDR,59.82.132.207/32,NoMalwares
+IP-CIDR,59.82.132.231/32,NoMalwares
+IP-CIDR,59.82.133.114/32,NoMalwares
+IP-CIDR,59.82.133.149/32,NoMalwares
+IP-CIDR,59.82.133.157/32,NoMalwares
+IP-CIDR,59.82.133.36/32,NoMalwares
+IP-CIDR,59.82.133.4/32,NoMalwares
+IP-CIDR,59.82.133.59/32,NoMalwares
+IP-CIDR,59.82.133.78/32,NoMalwares
+IP-CIDR,59.82.9.137/32,NoMalwares
+IP-CIDR,59.82.9.165/32,NoMalwares
+IP-CIDR,59.82.9.203/32,NoMalwares
+IP-CIDR,59.82.9.207/32,NoMalwares
+IP-CIDR,59.82.9.227/32,NoMalwares
+IP-CIDR,59.82.9.242/32,NoMalwares
+IP-CIDR,59.82.9.248/32,NoMalwares
+IP-CIDR,59.82.9.249/32,NoMalwares
+IP-CIDR,60.170.11.143/32,NoMalwares
+IP-CIDR,60.170.11.144/32,NoMalwares
+IP-CIDR,60.188.118.112/32,NoMalwares
+IP-CIDR,60.188.118.119/32,NoMalwares
+IP-CIDR,60.188.118.249/32,NoMalwares
+IP-CIDR,60.188.118.250/32,NoMalwares
+IP-CIDR,60.19.29.21/32,NoMalwares
+IP-CIDR,60.19.29.22/31,NoMalwares
+IP-CIDR,60.19.29.24/30,NoMalwares
+IP-CIDR,60.190.139.164/32,NoMalwares
+IP-CIDR,60.191.124.236/32,NoMalwares
+IP-CIDR,60.191.124.252/32,NoMalwares
+IP-CIDR,60.28.172.100/32,NoMalwares
+IP-CIDR,61.131.208.210/31,NoMalwares
+IP-CIDR,61.139.8.101/32,NoMalwares
+IP-CIDR,61.139.8.102/31,NoMalwares
+IP-CIDR,61.139.8.104/32,NoMalwares
+IP-CIDR,61.160.200.223/32,NoMalwares
+IP-CIDR,61.160.200.242/32,NoMalwares
+IP-CIDR,61.160.200.252/32,NoMalwares
+IP-CIDR,61.160.227.120/32,NoMalwares
+IP-CIDR,61.174.50.214/32,NoMalwares
+IP-CIDR,61.183.1.186/32,NoMalwares
+IP-CIDR,61.191.206.4/32,NoMalwares
+IP-CIDR,62.122.168.42/32,NoMalwares
+IP-CIDR,62.210.11.203/32,NoMalwares
+IP-CIDR,62.210.6.153/32,NoMalwares
+IP-CIDR,62.210.7.209/32,NoMalwares
+IP-CIDR,62.210.9.92/32,NoMalwares
+IP-CIDR,62.76.25.27/32,NoMalwares
+IP-CIDR,62.76.25.28/32,NoMalwares
+IP-CIDR,64.28.236.188/32,NoMalwares
+IP-CIDR,66.228.52.30/32,NoMalwares
+IP-CIDR,66.85.156.85/32,NoMalwares
+IP-CIDR,66.85.156.86/32,NoMalwares
+IP-CIDR,67.228.151.70/32,NoMalwares
+IP-CIDR,69.162.70.109/32,NoMalwares
+IP-CIDR,69.49.231.244/32,NoMalwares
+IP-CIDR,69.64.49.203/32,NoMalwares
+IP-CIDR,69.64.52.249/32,NoMalwares
+IP-CIDR,72.11.130.164/32,NoMalwares
+IP-CIDR,72.11.130.170/31,NoMalwares
+IP-CIDR,72.11.130.173/32,NoMalwares
+IP-CIDR,72.11.130.174/32,NoMalwares
+IP-CIDR,72.14.178.174/32,NoMalwares
+IP-CIDR,72.14.185.43/32,NoMalwares
+IP-CIDR,72.9.157.254/32,NoMalwares
+IP-CIDR,74.208.27.239/32,NoMalwares
+IP-CIDR,74.55.82.102/32,NoMalwares
+IP-CIDR,76.223.15.82/32,NoMalwares
+IP-CIDR,77.162.125.199/32,NoMalwares
+IP-CIDR,77.247.178.41/32,NoMalwares
+IP-CIDR,78.140.134.198/32,NoMalwares
+IP-CIDR,78.140.149.216/32,NoMalwares
+IP-CIDR,79.125.117.123/32,NoMalwares
+IP-CIDR,79.133.46.252/32,NoMalwares
+IP-CIDR,79.143.181.251/32,NoMalwares
+IP-CIDR,81.69.116.102/32,NoMalwares
+IP-CIDR,81.69.116.86/32,NoMalwares
+IP-CIDR,81.69.116.87/32,NoMalwares
+IP-CIDR,82.147.85.156/32,NoMalwares
+IP-CIDR,85.159.213.158/32,NoMalwares
+IP-CIDR,85.17.31.122/32,NoMalwares
+IP-CIDR,85.17.31.82/32,NoMalwares
+IP-CIDR,88.208.22.1/32,NoMalwares
+IP-CIDR,88.208.46.222/32,NoMalwares
+IP-CIDR,88.85.75.147/32,NoMalwares
+IP-CIDR,88.85.77.92/32,NoMalwares
+IP-CIDR,91.204.226.224/32,NoMalwares
+IP-CIDR,91.207.192.31/32,NoMalwares
+IP-CIDR,91.212.166.16/32,NoMalwares
+IP-CIDR,91.241.60.117/32,NoMalwares
+IP-CIDR,94.130.167.163/32,NoMalwares
+IP-CIDR,94.130.185.237/32,NoMalwares
+IP-CIDR,94.130.186.231/32,NoMalwares
+IP-CIDR,94.156.64.129/32,NoMalwares
+IP-CIDR,94.232.249.235/32,NoMalwares
+IP-CIDR,94.232.249.61/32,NoMalwares
+IP-CIDR,94.232.249.69/32,NoMalwares
+IP-CIDR,94.232.249.75/32,NoMalwares
+IP-CIDR,95.168.170.165/32,NoMalwares
+IP-CIDR,95.211.125.226/32,NoMalwares
+IP-CIDR,95.211.229.247/32,NoMalwares
+IP-CIDR,96.126.123.244/32,NoMalwares
+IP-CIDR,96.47.230.67/32,NoMalwares
+IP-CIDR,96.47.230.68/31,NoMalwares
+IP-CIDR,96.47.230.70/32,NoMalwares
+IP-CIDR6,2400:3200::1/128,NoMalwares
+IP-CIDR6,2400:3200:baba::1/128,NoMalwares
+IP-CIDR6,2401:b180:2000:20::10/128,NoMalwares
+IP-CIDR6,2401:b180:2000:30::1c/128,NoMalwares
+IP-CIDR6,2401:b180:7001::31b/128,NoMalwares
+IP-CIDR6,2401:b180:7003::12d/128,NoMalwares
+IP-CIDR6,2401:b180:7003::146/128,NoMalwares
+IP-CIDR6,2401:b180:7003::16b/128,NoMalwares
+IP-CIDR6,2401:b180:7003::187/128,NoMalwares
+IP-CIDR6,2401:b180:7003::197/128,NoMalwares
+IP-CIDR6,2401:b180:7003::1b8/128,NoMalwares
+IP-CIDR6,2401:b180:7003::1d1/128,NoMalwares
+IP-CIDR6,2401:b180:7003::1d6/128,NoMalwares
+IP-CIDR6,2401:b180:7003::1e1/128,NoMalwares
+IP-CIDR6,2401:b180:7003::258/128,NoMalwares
+IP-CIDR6,2401:b180:7003::2a7/128,NoMalwares
+IP-CIDR6,2401:b180:7003::335/128,NoMalwares
+IP-CIDR6,2401:b180:7003::344/128,NoMalwares
+IP-CIDR6,2401:b180:7003::35f/128,NoMalwares
+IP-CIDR6,2401:b180:7003::392/128,NoMalwares
+IP-CIDR6,2401:b180:7003::39d/128,NoMalwares
+IP-CIDR6,2401:b180:7003::3e0/128,NoMalwares
+IP-CIDR6,2401:b180:7003::3f9/128,NoMalwares
+IP-CIDR6,2402:4e00:1410::9890:edfe:f13a/128,NoMalwares
+IP-CIDR6,2402:4e00:1410::98f5:ab14:193f/128,NoMalwares
+IP-CIDR6,2408:4001:f00::1007/128,NoMalwares
+IP-CIDR6,2408:4001:f00::1063/128,NoMalwares
+IP-CIDR6,2408:4001:f00::1066/128,NoMalwares
+IP-CIDR6,2408:4001:f00::106d/128,NoMalwares
+IP-CIDR6,2408:4001:f00::10ad/128,NoMalwares
+IP-CIDR6,2408:4001:f00::10b5/128,NoMalwares
+IP-CIDR6,2408:4001:f00::10dc/128,NoMalwares
+IP-CIDR6,2408:4001:f00::10e8/128,NoMalwares
+IP-CIDR6,2408:4001:f00::10f5/128,NoMalwares
+IP-CIDR6,2408:4001:f00::1117/128,NoMalwares
+IP-CIDR6,2408:4001:f00::1118/128,NoMalwares
+IP-CIDR6,2408:4001:f00::1130/128,NoMalwares
+IP-CIDR6,2408:4001:f00::1154/128,NoMalwares
+IP-CIDR6,2408:4001:f00::116f/128,NoMalwares
+IP-CIDR6,2408:4001:f00::11c8/128,NoMalwares
+IP-CIDR6,2408:4001:f00::11f2/128,NoMalwares
+IP-CIDR6,2408:4001:f00::11f6/128,NoMalwares
+IP-CIDR6,2408:4001:f00::121e/128,NoMalwares
+IP-CIDR6,2408:4001:f00::137/128,NoMalwares
+IP-CIDR6,2408:4001:f10::126/128,NoMalwares
+IP-CIDR6,2408:4001:f10::13/128,NoMalwares
+IP-CIDR6,2408:4001:f10::151/128,NoMalwares
+IP-CIDR6,2408:4001:f10::184/128,NoMalwares
+IP-CIDR6,2408:4001:f10::197/128,NoMalwares
+IP-CIDR6,2408:4001:f10::1a/128,NoMalwares
+IP-CIDR6,2408:4001:f10::1c0/128,NoMalwares
+IP-CIDR6,2408:4001:f10::29e/128,NoMalwares
+IP-CIDR6,2408:4001:f10::2da/128,NoMalwares
+IP-CIDR6,2408:4001:f10::2e2/128,NoMalwares
+IP-CIDR6,2408:4001:f10::329/128,NoMalwares
+IP-CIDR6,2408:4001:f10::347/128,NoMalwares
+IP-CIDR6,2408:4001:f10::349/128,NoMalwares
+IP-CIDR6,2408:4001:f10::38d/128,NoMalwares
+IP-CIDR6,2408:4001:f10::3b2/128,NoMalwares
+IP-CIDR6,2408:4001:f10::3ca/128,NoMalwares
+IP-CIDR6,2408:4003:1f40::30a/128,NoMalwares
+IP-CIDR6,2408:8630:20b0:7:3::3e3/128,NoMalwares
+IP-CIDR6,2408:8630:20b0:7:3::3e4/128,NoMalwares
+IP-CIDR6,2408:8706:2:1001::49/128,NoMalwares
+IP-CIDR6,2408:8706:2:1002::13/128,NoMalwares
+IP-CIDR6,2408:8711:10:1001::67/128,NoMalwares
+IP-CIDR6,2408:8711:10:1003::25/128,NoMalwares
+IP-CIDR6,2408:8719:2100:3:3::3ed/128,NoMalwares
+IP-CIDR6,2408:8719:2600:2:3::3e5/128,NoMalwares
+IP-CIDR6,2408:8719:2600:2:3::3e6/128,NoMalwares
+IP-CIDR6,2408:8719:3100:b:3::3fb/128,NoMalwares
+IP-CIDR6,2408:8719:64:19:3::3cd/128,NoMalwares
+IP-CIDR6,2408:8719:64:19:3::3ce/128,NoMalwares
+IP-CIDR6,2408:8719:64:21:3::3f1/128,NoMalwares
+IP-CIDR6,2408:8719:64:21:3::3f2/128,NoMalwares
+IP-CIDR6,2408:871a:2000:4:3::3d3/128,NoMalwares
+IP-CIDR6,2408:871a:2000:4:3::3d4/128,NoMalwares
+IP-CIDR6,2408:871a:8010:402:3::3fb/128,NoMalwares
+IP-CIDR6,2408:871a:8010:402:3::3fc/128,NoMalwares
+IP-CIDR6,2408:871a:8010:403:3::3fb/128,NoMalwares
+IP-CIDR6,2408:871a:8010:403:3::3fc/128,NoMalwares
+IP-CIDR6,2408:8730:600:5:103::7f7/128,NoMalwares
+IP-CIDR6,2408:8730:600:5:103::7f8/128,NoMalwares
+IP-CIDR6,2408:8734:4010:2:3::3f3/128,NoMalwares
+IP-CIDR6,2408:8734:4010:2:3::3f4/128,NoMalwares
+IP-CIDR6,2408:8736:2800:37:3::3e3/128,NoMalwares
+IP-CIDR6,2408:873c:7010:2:3::3e4/128,NoMalwares
+IP-CIDR6,2408:873c:7010:2:3::3e5/128,NoMalwares
+IP-CIDR6,2408:873d:2810:1:3::b/128,NoMalwares
+IP-CIDR6,2408:873d:2810:1:3::c/128,NoMalwares
+IP-CIDR6,2408:8756:f1ff:f004:3::3ef/128,NoMalwares
+IP-CIDR6,2408:8756:f1ff:f004:3::3f0/128,NoMalwares
+IP-CIDR6,2408:8756:f50:2005::91/128,NoMalwares
+IP-CIDR6,2408:8756:f50:3053::a8/128,NoMalwares
+IP-CIDR6,2408:875c:5000:203:3::3e0/128,NoMalwares
+IP-CIDR6,2408:875c:5000:203:3::3e1/128,NoMalwares
+IP-CIDR6,2409:8702:4860:1000::15/128,NoMalwares
+IP-CIDR6,2409:8702:4860:1001::5c/128,NoMalwares
+IP-CIDR6,2409:8c00:8401:1000::27/128,NoMalwares
+IP-CIDR6,2409:8c00:8401:1003::d/128,NoMalwares
+IP-CIDR6,2409:8c02:11c:161:3::3fb/128,NoMalwares
+IP-CIDR6,2409:8c02:11c:161:3::3fc/128,NoMalwares
+IP-CIDR6,2409:8c02:218:203:3::7e3/128,NoMalwares
+IP-CIDR6,2409:8c02:218:203:3::7e4/128,NoMalwares
+IP-CIDR6,2409:8c02:24c:90:3::3f1/128,NoMalwares
+IP-CIDR6,2409:8c02:24c:90:3::3f2/128,NoMalwares
+IP-CIDR6,2409:8c0c:310:3901:3::3fd/128,NoMalwares
+IP-CIDR6,2409:8c0c:310:3901:3::3fe/128,NoMalwares
+IP-CIDR6,2409:8c0c:310:500:3::3e3/128,NoMalwares
+IP-CIDR6,2409:8c0c:310:500:3::3e4/128,NoMalwares
+IP-CIDR6,2409:8c10:c00:140b:3::3f1/128,NoMalwares
+IP-CIDR6,2409:8c10:c00:140b:3::3f2/128,NoMalwares
+IP-CIDR6,2409:8c10:c00:f:3::3ea/128,NoMalwares
+IP-CIDR6,2409:8c20:12ff:101:3::3e2/128,NoMalwares
+IP-CIDR6,2409:8c20:815:112:3::3ed/128,NoMalwares
+IP-CIDR6,2409:8c20:815:114:3::3fa/128,NoMalwares
+IP-CIDR6,2409:8c20:815:115:3::7e6/128,NoMalwares
+IP-CIDR6,2409:8c20:815:116:3::7f0/128,NoMalwares
+IP-CIDR6,2409:8c20:815:121:3::7f5/128,NoMalwares
+IP-CIDR6,2409:8c54:2800:9012:3::3e5/128,NoMalwares
+IP-CIDR6,2409:8c54:2800:9012:3::3e6/128,NoMalwares
+IP-CIDR6,2409:8c54:3010:4:3::3f1/128,NoMalwares
+IP-CIDR6,2409:8c54:3010:4:3::3f2/12wares
+IP-CIDR6,2409:8c54:4850:2:3::3ed/128,NoMalwares
+IP-CIDR6,2409:8c54:4850:2:3::3ee/128,NoMalwares
+IP-CIDR6,2409:8c54:4850:3:3::11/128,NoMalwares
+IP-CIDR6,2409:8c54:871:2005::4e/128,NoMalwares
+IP-CIDR6,2409:8c54:871:3053::ac/128,NoMalwares
+IP-CIDR6,2409:8c54:b010:29:3::3c4/128,NoMalwares
+IP-CIDR6,2409:8c70:3a04:7:3::a/128,NoMalwares
+IP-CIDR6,2409:8c70:3a04:7:3::b/128,NoMalwares
+IP-CIDR6,2409:8c70:3a10:c:715::3f1/128,NoMalwares
+IP-CIDR6,2409:8c70:3a10:c:715::3f2/128,NoMalwares
+IP-CIDR6,240e:106:ab00:2:3::7f2/128,NoMalwares
+IP-CIDR6,240e:904:3401:1001::e/128,NoMalwares
+IP-CIDR6,240e:904:3401:1003::32/128,NoMalwares
+IP-CIDR6,240e:904:800:1800:3::3e2/128,NoMalwares
+IP-CIDR6,240e:904:800:1801:3::19/128,NoMalwares
+IP-CIDR6,240e:904:800:1804:3::3eb/128,NoMalwares
+IP-CIDR6,240e:90d:1101:207:103::7f7/128,NoMalwares
+IP-CIDR6,240e:928:1400:1000::3/128,NoMalwares
+IP-CIDR6,240e:928:1400:1003::23/128,NoMalwares
+IP-CIDR6,240e:945:5000:2:3::3e6/128,NoMalwares
+IP-CIDR6,240e:945:5000:2:3::3e7/128,NoMalwares
+IP-CIDR6,240e:945:8:5:3::3fb/128,NoMalwares
+IP-CIDR6,240e:945:8:5:3::3fc/128,NoMalwares
+IP-CIDR6,240e:947:4002:12:715::285/128,NoMalwares
+IP-CIDR6,240e:947:4002:12:715::286/128,NoMalwares
+IP-CIDR6,240e:958:1000:0:3::14/128,NoMalwares
+IP-CIDR6,240e:958:1000:0:3::15/128,NoMalwares
+IP-CIDR6,240e:95c:3014:12:3::3ee/128,NoMalwares
+IP-CIDR6,240e:95c:3014:13:3::3f3/128,NoMalwares
+IP-CIDR6,240e:95c:3014:15:3::3fb/128,NoMalwares
+IP-CIDR6,240e:95c:3014:16:3::3e9/128,NoMalwares
+IP-CIDR6,240e:95d:3021:12:3::f/128,NoMalwares
+IP-CIDR6,240e:964:1003:101:3::13/128,NoMalwares
+IP-CIDR6,240e:96a:4000:4:3::3ea/128,NoMalwares
+IP-CIDR6,240e:96c:6000:2501:3::3ed/128,NoMalwares
+IP-CIDR6,240e:96c:6000:2503:3::3f2/128,NoMalwares
+IP-CIDR6,240e:974:e200:2310:3::3f5/128,NoMalwares
+IP-CIDR6,240e:974:e200:2310:3::3f6/128,NoMalwares
+IP-CIDR6,240e:974:e200:2311:3::3ed/128,NoMalwares
+IP-CIDR6,240e:974:e200:2311:3::3ee/128,NoMalwares
+IP-CIDR6,240e:974:e200:2312:3::3eb/128,NoMalwares
+IP-CIDR6,240e:974:e200:2312:3::3ec/128,NoMalwares
+IP-CIDR6,240e:978:1204:0:715::3e7/128,NoMalwares
+IP-CIDR6,240e:978:5405:2:3::3f1/128,NoMalwares
+IP-CIDR6,240e:978:5405:2:3::3f2/128,NoMalwares
+IP-CIDR6,240e:978:a07:0:3::3f9/128,NoMalwares
+IP-CIDR6,240e:979:801:533:3::3ee/128,NoMalwares
+IP-CIDR6,240e:97c:2f:200f::f6/128,NoMalwares
+IP-CIDR6,240e:97c:2f:3053::4f/128,NoMalwares
+IP-CIDR6,240e:c2:1800:165:3::3e8/128,NoMalwares
+IP-CIDR6,240e:c2:1800:169:3::3fa/128,NoMalwares
+IP-CIDR6,240e:cf:8800:0:3::3ec/128,NoMalwares
+IP-CIDR6,240e:f7:7000:c1:3::3fb/128,NoMalwares
+IP-CIDR6,240e:f7:7c00:106:3::3e1/128,NoMalwares
+IP-CIDR6,240e:f7:7c00:10a:3::3c7/128,NoMalwares
+IP-CIDR6,240e:f7:7c00:10a:3::3c8/128,NoMalwares
+IP-CIDR6,240e:f7:a096:300:3::1e/128,NoMalwares
+DOMAIN-KEYWORD, live-p2p, FuckRogueSoftware # Changed from HOST-WILDCARD,*-*-live-p2p-*.chat.bilibili.com
+DOMAIN-KEYWORD, analytics, FuckRogueSoftware # Changed from HOST-WILDCARD,*-analytics-*.huami.com
+DOMAIN-KEYWORD, -acs.m.taobao.com, FuckRogueSoftware
+DOMAIN-KEYWORD, -adrevenue.appsflyersdk.com, FuckRogueSoftware
+DOMAIN-KEYWORD, -ads.hara.vn, FuckRogueSoftware
+DOMAIN-KEYWORD, -aerserv.adsrvr.org, FuckRogueSoftware
+DOMAIN-KEYWORD, -analytics.amazon.com, FuckRogueSoftware
+DOMAIN-KEYWORD, -api-js.gifshow.com, FuckRogueSoftware
+DOMAIN-KEYWORD, -api.appsflyersdk.com, FuckRogueSoftware
+DOMAIN-KEYWORD, -app.appsflyersdk.com, FuckRogueSoftware
+DOMAIN-KEYWORD, -ars.appsflyersdk.com, FuckRogueSoftware
+DOMAIN-KEYWORD, -attr.appsflyersdk.com, FuckRogueSoftware
+DOMAIN-KEYWORD, -backup.adjust.com, FuckRogueSoftware
+DOMAIN-KEYWORD, -bus-analytics-1-1.servicebus.windows.net, FuckRogueSoftware
+DOMAIN-KEYWORD, -cdn-settings.appsflyersdk.com, FuckRogueSoftware
+DOMAIN-KEYWORD, -conversions.appsflyersdk.com, FuckRogueSoftware
+DOMAIN-KEYWORD, -dlsdk.appsflyersdk.com, FuckRogueSoftware
+DOMAIN-KEYWORD, -dynamic-config-api.appsflyersdk.com, FuckRogueSoftware
+DOMAIN-KEYWORD, -dynamic-report-api.appsflyersdk.com, FuckRogueSoftware
+DOMAIN-KEYWORD, -events.adjust.com, FuckRogueSoftware
+DOMAIN-KEYWORD, -ext.adsrvr.org, FuckRogueSoftware
+DOMAIN-KEYWORD, -feedback.mtgglobals.com, FuckRogueSoftware
+DOMAIN-KEYWORD, -gcdsdk.appsflyersdk.com, FuckRogueSoftware
+DOMAIN-KEYWORD, -hb.mtgglobals.com, FuckRogueSoftware
+DOMAIN-KEYWORD, -https.mtgglobals.com, FuckRogueSoftware
+DOMAIN-KEYWORD, -ie.tiktokcdn-eu.com, FuckRogueSoftware
+DOMAIN-KEYWORD, -impression.appsflyersdk.com, FuckRogueSoftware
+DOMAIN-KEYWORD, -inapps.appsflyersdk.com, FuckRogueSoftware
+DOMAIN-KEYWORD, -int.adsrvr.org, FuckRogueSoftware
+DOMAIN-KEYWORD, -ios.mtgglobals.com, FuckRogueSoftware
+DOMAIN-KEYWORD, -ipv6.jpush.cn, FuckRogueSoftware
+DOMAIN-KEYWORD, -jmacs.m.taobao.com, FuckRogueSoftware
+DOMAIN-KEYWORD, -launches.appsflyersdk.com, FuckRogueSoftware
+DOMAIN-KEYWORD, -log-upload-os.mihoyo.com, FuckRogueSoftware
+DOMAIN-KEYWORD, -log-upload-v6.mihoyo.com, FuckRogueSoftware
+DOMAIN-KEYWORD, -log-upload.mihoyo.com, FuckRogueSoftware
+DOMAIN-KEYWORD, -log-upload.mihoyo.com.w.kunluncan.com, FuckRogueSoftware
+DOMAIN-KEYWORD, -logproxy.mhystatic.com, FuckRogueSoftware
+DOMAIN-KEYWORD, -lst.adsrvr.org, FuckRogueSoftware
+DOMAIN-KEYWORD, -metrics.amazon.com, FuckRogueSoftware
+DOMAIN-KEYWORD, -normal-lf.zijieapi.com, FuckRogueSoftware
+DOMAIN-KEYWORD, -normal-lf.zijieapi.com.c.dsa.cdnbuild.net, FuckRogueSoftware
+DOMAIN-KEYWORD, -normal-lq.zijieapi.com, FuckRogueSoftware
+DOMAIN-KEYWORD, -normal-lq.zijieapi.com.c.dsa.cdnbuild.net, FuckRogueSoftware
+DOMAIN-KEYWORD, -normal.zijieapi.com, FuckRogueSoftware
+DOMAIN-KEYWORD, -normal.zijieapi.com.c.dsa.cdnbuild.net, FuckRogueSoftware
+DOMAIN-KEYWORD, -onelink.appsflyersdk.com, FuckRogueSoftware
+DOMAIN-KEYWORD, -openx.adsrvr.org, FuckRogueSoftware
+DOMAIN-KEYWORD, -prd.appsflyer.com, FuckRogueSoftware
+DOMAIN-KEYWORD, -register.appsflyersdk.com, FuckRogueSoftware
+DOMAIN-KEYWORD, -report.gifshow.com, FuckRogueSoftware
+DOMAIN-KEYWORD, -rtb1.rfihub.com, FuckRogueSoftware
+DOMAIN-KEYWORD, -sdk-services.appsflyersdk.com, FuckRogueSoftware
+DOMAIN-KEYWORD, -sg.bytegsdk.com, FuckRogueSoftware
+DOMAIN-KEYWORD, -share.mob.com, FuckRogueSoftware
+DOMAIN-KEYWORD, -sign.tiktokcdn-eu.com, FuckRogueSoftware
+DOMAIN-KEYWORD, -skadsdk.appsflyersdk.com, FuckRogueSoftware
+DOMAIN-KEYWORD, -skadsdkless.appsflyersdk.com, FuckRogueSoftware
+DOMAIN-KEYWORD, -stat.jpush.cn, FuckRogueSoftware
+DOMAIN-KEYWORD, -stg.appsflyer.com, FuckRogueSoftware
+DOMAIN-KEYWORD, -tcp.mtgglobals.com, FuckRogueSoftware
+DOMAIN-KEYWORD, -test.adjust.com, FuckRogueSoftware
+DOMAIN-KEYWORD, -test.adsrvr.org, FuckRogueSoftware
+DOMAIN-KEYWORD, -tracker.atlassian.net, FuckRogueSoftware
+DOMAIN-KEYWORD, -tracker.corp.amazon.com, FuckRogueSoftware
+DOMAIN-KEYWORD, -tracking.atlassian.net, FuckRogueSoftware
+DOMAIN-KEYWORD, -upload-js.gifshow.com, FuckRogueSoftware
+DOMAIN-KEYWORD, -useast2a.tiktokcdn-eu.com, FuckRogueSoftware
+DOMAIN-KEYWORD, -va.bytegsdk.com, FuckRogueSoftware
+DOMAIN-KEYWORD, -validate.appsflyersdk.com, FuckRogueSoftware
+DOMAIN-KEYWORD, -verify.mob.com, FuckRogueSoftware
+DOMAIN-KEYWORD, -webhandler.appsflyer.com, FuckRogueSoftware
+DOMAIN-KEYWORD, -zvc-te-vnso-ne-1.mdchat.me, FuckRogueSoftware
+DOMAIN-KEYWORD, -zvc-te-vnso-ne-2.mdchat.me, FuckRogueSoftware
+DOMAIN-KEYWORD, -zvc-te-vnso-pt-24.mdchat.me, FuckRogueSoftware
+DOMAIN-KEYWORD, -zvc-te-vnso-pt-25.mdchat.me, FuckRogueSoftware
+DOMAIN-KEYWORD, -zvc-te-vnso-pt-33.mdchat.me, FuckRogueSoftware
+DOMAIN-KEYWORD, -zvc-te-vnso-pt-34.mdchat.me, FuckRogueSoftware
+DOMAIN-KEYWORD, -zvc-te-vnso-pt-35.mdchat.me, FuckRogueSoftware
+DOMAIN-KEYWORD, -zvc-te-vnso-pt-42.mdchat.me, FuckRogueSoftware
+DOMAIN-KEYWORD, -zvc-te-vnso-pt-43.mdchat.me, FuckRogueSoftware
+DOMAIN-KEYWORD, -zvc-te-vnso-pt-45.mdchat.me, FuckRogueSoftware
+DOMAIN-KEYWORD, -zvc.mdchat.me, FuckRogueSoftware
+DOMAIN-SUFFIX, 09-0-2-erguj-3e54r9gh-w0e9jv-0sd8ghv-0das9jh-0hyf.obs.ap-southeast-1.myhuaweicloud.com, FuckRogueSoftware
+DOMAIN-SUFFIX, 0app.adjust.com, FuckRogueSoftware
+DOMAIN-SUFFIX, 1.feihua.net.cn, FuckRogueSoftware
+IP-CIDR, 101.124.19.122/32, FuckRogueSoftware, no-resolve
+IP-CIDR, 101.227.200.11/32, FuckRogueSoftware, no-resolve
+IP-CIDR, 101.227.200.28/32, FuckRogueSoftware, no-resolve
+IP-CIDR, 101.227.97.240/32, FuckRogueSoftware, no-resolve
+IP-CIDR, 103.224.222.208/32, FuckRogueSoftware, no-resolve
+IP-CIDR, 103.41.167.237/32, FuckRogueSoftware, no-resolve
+IP-CIDR, 114.132.165.205/32, FuckRogueSoftware, no-resolve
+IP-CIDR, 115.236.121.195/32, FuckRogueSoftware, no-resolve
+IP-CIDR, 115.236.121.51/32, FuckRogueSoftware, no-resolve
+IP-CIDR, 116.196.84.232/32, FuckRogueSoftware, no-resolve
+IP-CIDR, 117.177.248.17/32, FuckRogueSoftware, no-resolve
+IP-CIDR, 117.177.248.41/32, FuckRogueSoftware, no-resolve
+IP-CIDR, 118.89.204.198/23, FuckRogueSoftware, no-resolve
+IP-CIDR, 119.29.29.98/32, FuckRogueSoftware, no-resolve
+IP-CIDR, 119.29.29.99/32, FuckRogueSoftware, no-resolve
+IP-CIDR, 121.36.6.165/32, FuckRogueSoftware, no-resolve
+IP-CIDR, 123.151.54.50/32, FuckRogueSoftware, no-resolve
+IP-CIDR, 139.9.141.89/32, FuckRogueSoftware, no-resolve
+IP-CIDR, 157.148.47.204/32, FuckRogueSoftware, no-resolve
+IP-CIDR, 164.155.255.240/32, FuckRogueSoftware, no-resolve
+IP-CIDR, 182.254.118.117/32, FuckRogueSoftware, no-resolve
+IP-CIDR, 182.254.118.119/32, FuckRogueSoftware, no-resolve
+IP-CIDR, 183.232.25.151/32, FuckRogueSoftware, no-resolve
+IP-CIDR, 186.76.76.200/32, FuckRogueSoftware, no-resolve
+DOMAIN-SUFFIX, 1app.adjust.com, FuckRogueSoftware
+DOMAIN, 1oavsblobprodcus350.blob.core.windows.net, FuckRogueSoftware
+DOMAIN-SUFFIX, 1q2w3.fun, FuckRogueSoftware
+DOMAIN-SUFFIX, 1view.adjust.com, FuckRogueSoftware
+IP-CIDR, 203.107.1.0/24, FuckRogueSoftware, no-resolve
+IP-CIDR, 203.107.1.1/24, FuckRogueSoftware, no-resolve
+IP-CIDR, 203.107.63.154/32, FuckRogueSoftware, no-resolve
+DOMAIN, 2052.flash2-http.qq.com, FuckRogueSoftware
+IP-CIDR, 223.87.176.139/32, FuckRogueSoftware, no-resolve
+IP-CIDR, 223.87.176.176/32, FuckRogueSoftware, no-resolve
+IP-CIDR, 223.87.177.180/32, FuckRogueSoftware, no-resolve
+IP-CIDR, 223.87.177.182/32, FuckRogueSoftware, no-resolve
+IP-CIDR, 223.87.177.184/32, FuckRogueSoftware, no-resolve
+IP-CIDR, 223.87.177.43/32, FuckRogueSoftware, no-resolve
+IP-CIDR, 223.87.177.47/32, FuckRogueSoftware, no-resolve
+IP-CIDR, 223.87.177.80/32, FuckRogueSoftware, no-resolve
+IP-CIDR, 223.87.182.101/32, FuckRogueSoftware, no-resolve
+IP-CIDR, 223.87.182.102/32, FuckRogueSoftware, no-resolve
+IP-CIDR, 223.87.182.11/32, FuckRogueSoftware, no-resolve
+IP-CIDR, 223.87.182.52/32, FuckRogueSoftware, no-resolve
+DOMAIN-SUFFIX, 22app.adjust.com, FuckRogueSoftware
+DOMAIN-SUFFIX, 2345.cc, FuckRogueSoftware
+DOMAIN-SUFFIX, 2345.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, 2345.com, FuckRogueSoftware
+IP-CIDR, 240.1.1.0/4, FuckRogueSoftware, no-resolve
+DOMAIN-SUFFIX, 252fapp.adjust.com, FuckRogueSoftware
+DOMAIN-SUFFIX, 2fapp.adjust.com, FuckRogueSoftware
+DOMAIN-SUFFIX, 360.yahoo.com, FuckRogueSoftware
+DOMAIN-SUFFIX, 3600.com, FuckRogueSoftware
+DOMAIN-SUFFIX, 360game.360.cn, FuckRogueSoftware
+DOMAIN, 37bvsblobprodcus311.blob.core.windows.net, FuckRogueSoftware
+IP-CIDR, 39.107.142.158/32, FuckRogueSoftware, no-resolve
+IP-CIDR, 39.97.128.148/32, FuckRogueSoftware, no-resolve
+IP-CIDR, 39.97.130.51/32, FuckRogueSoftware, no-resolve
+DOMAIN, 397c0.admaster.com.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, 3edc.cn, FuckRogueSoftware
+DOMAIN, 3gimg.qq.com, FuckRogueSoftware
+IP-CIDR, 42.187.182.106/32, FuckRogueSoftware, no-resolve
+IP-CIDR, 42.187.182.123/32, FuckRogueSoftware, no-resolve
+IP-CIDR, 42.187.184.154/32, FuckRogueSoftware, no-resolve
+IP-CIDR, 42.81.232.18/32, FuckRogueSoftware, no-resolve
+DOMAIN-SUFFIX, 51.la, FuckRogueSoftware
+IP-CIDR, 59.111.239.61/32, FuckRogueSoftware, no-resolve
+IP-CIDR, 59.111.239.62/32, FuckRogueSoftware, no-resolve
+DOMAIN-SUFFIX, 5g-0v-wirnhfg-9wiebgf-8wgf-q9eh-8egth-8e.obs.ap-southeast-3.myhuaweicloud.com, FuckRogueSoftware
+DOMAIN-SUFFIX, 69app.adjust.com, FuckRogueSoftware
+DOMAIN-SUFFIX, 8035ugt-w34hrg-0hjwre-ghjew-r0hg-ehg9-h-rtg.obs.af-south-1.myhuaweicloud.com, FuckRogueSoftware
+DOMAIN-SUFFIX, 88-baidu.com, FuckRogueSoftware
+IP-CIDR, 91.241.60.117/32, FuckRogueSoftware, no-resolve
+DOMAIN-SUFFIX, _im64._tcp.jpush.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, _psis._udp.jpush.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, a.ac.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, a.ads2.msads.net, FuckRogueSoftware
+DOMAIN-SUFFIX, a.ads2.msn.com, FuckRogueSoftware
+DOMAIN-SUFFIX, a.adsplay.xyz, FuckRogueSoftware
+DOMAIN, a.alimama.cn, FuckRogueSoftware
+DOMAIN, a.app.qq.com, FuckRogueSoftware
+DOMAIN, a.baidu.cn, FuckRogueSoftware
+DOMAIN, a.baidu.com, FuckRogueSoftware
+DOMAIN, a.ckm.iqiyi.com, FuckRogueSoftware
+DOMAIN-SUFFIX, a.hl.mi.com, FuckRogueSoftware
+DOMAIN-SUFFIX, a.market.xiaomi.com, FuckRogueSoftware
+DOMAIN, a.ssl.msdk.qq.com, FuckRogueSoftware
+DOMAIN, a.stat.xiaomi.com, FuckRogueSoftware
+DOMAIN, a.tanx.com, FuckRogueSoftware
+DOMAIN-SUFFIX, a.track.sohu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, a0.app.xiaomi.com, FuckRogueSoftware
+DOMAIN-SUFFIX, a1.adsplay.xyz, FuckRogueSoftware
+DOMAIN-SUFFIX, a15-tb.isnssdk.com, FuckRogueSoftware
+DOMAIN-SUFFIX, a16-tb.isnssdk.com, FuckRogueSoftware
+DOMAIN, a245090.com-apache-alpha-wxopen-learning-12.lb.1.oppo.cn, FuckRogueSoftware
+DOMAIN, a245090.com-cloud-0-268360-168360-engine.com-cloud-0-previp-168360-engine.0.oppo.cn, FuckRogueSoftware
+DOMAIN, a245090.com-cloud-0-google-265360payment-server.com-cloud-enginevpn-platform-myseat-engine.0.oppo.cn, FuckRogueSoftware
+DOMAIN, a245090.com-cloud-10-topiclax-learning-engine.pc.1.oppo.cn, FuckRogueSoftware
+DOMAIN, a245090.com-cloud-appleidelb-adminwx-learning-hybrid.10.1.oppo.cn, FuckRogueSoftware
+DOMAIN, a245090.com-cloud-distributionelb-wxopen-learning-12.fw.1.oppo.cn, FuckRogueSoftware
+DOMAIN, a245090.com-cloud-hd268358-myflowers-vipapi-appleidelb.11.1.oppo.cn, FuckRogueSoftware
+DOMAIN, a245090.com-cloud-hd268358-myflowers-vipapi-appleidelb.16.1.oppo.cn, FuckRogueSoftware
+DOMAIN, a245090.com-cloud-hdverify-google-learning-mylonelypussyelb.bh.1.oppo.cn, FuckRogueSoftware
+DOMAIN, a245090.com-cloud-hw-wxopen-learning-12getter.lb.1.oppo.cn, FuckRogueSoftware
+DOMAIN, a245090.com-cloud-i-topic-wxopen-learning-12global.lb.1.oppo.cn, FuckRogueSoftware
+DOMAIN, a245090.com-cloud-myaccount-tomcat-learning-engine.pc.1.oppo.cn, FuckRogueSoftware
+DOMAIN, a245090.com-cloud-xcx2rdfs-machine-api-xcx2rd.pc.1.oppo.cn, FuckRogueSoftware
+DOMAIN, a245090.com-cloud-xcx2rdfs-machine-mob-xcx2rd.pc.1.oppo.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, a2put.chinaz.com, FuckRogueSoftware
+DOMAIN-SUFFIX, a3.adsplay.xyz, FuckRogueSoftware
+DOMAIN-SUFFIX, a4.adsplay.xyz, FuckRogueSoftware
+DOMAIN-SUFFIX, a4.bing.com, FuckRogueSoftware
+DOMAIN, a45090.com-apache-i-topic-control-learning-12.lb.1.oppo.cn, FuckRogueSoftware
+DOMAIN, a45090.com-apache-i-topic-wxopen-learning-12traffic.lb.1.oppo.cn, FuckRogueSoftware
+DOMAIN, a45090.com-cloud-0-268360-myseat-engine.com-cloud-enginepaymentfs-xcx2rdtest2-learning-enginepayment.0.oppo.cn, FuckRogueSoftware
+DOMAIN, a45090.com-cloud-0-google-265360payment-server.com-cloud-enginevpn-platform-myseat-engine.0.oppo.cn, FuckRogueSoftware
+DOMAIN, a45090.com-cloud-10-topiclax-learning-engine.pc.1.oppo.cn, FuckRogueSoftware
+DOMAIN, a45090.com-cloud-appleid-distribution-learning-engine.hw.1.oppo.cn, FuckRogueSoftware
+DOMAIN, a45090.com-cloud-azure-machine-learning-xcx2rd.pc.1.oppo.cn, FuckRogueSoftware
+DOMAIN, a45090.com-cloud-computing-google-learning-appleidelb.v.1.oppo.cn, FuckRogueSoftware
+DOMAIN, a45090.com-cloud-enginevpn-platform-myseat-engine.b2.1.oppo.cn, FuckRogueSoftware
+DOMAIN, a45090.com-cloud-hdverify-google-learning-mylonelypussyelb.com-cloud-enginevpn-platform-myseat-engine.0.oppo.cn, FuckRogueSoftware
+DOMAIN, a45090.com-cloud-hdverify-myworld-vipapi-appleidelb.gw.1.oppo.cn, FuckRogueSoftware
+DOMAIN, a45090.com-cloud-i-topic-wxopen-learning-12.lb.1.oppo.cn, FuckRogueSoftware
+DOMAIN, a45090.com-cloud-i-topic-wxopen-learning-12global.lb.1.oppo.cn, FuckRogueSoftware
+DOMAIN, a45090.com-cloud-i-topic-wxopen-ssl-12.lb.1.oppo.cn, FuckRogueSoftware
+DOMAIN, a45090.com-cloud-iengine-origin2-learning-distribution.12.1.oppo.cn, FuckRogueSoftware
+DOMAIN, a45090.com-cloud-informationselb-wxopen-activedt-12-4.hw.1.oppo.cn, FuckRogueSoftware
+DOMAIN, a45090.com-cloud-learning-machine-learning-team.pc.1.oppo.cn, FuckRogueSoftware
+DOMAIN, a45090.com-cloud-myaccount-tomcat-learning-engine.pc.1.oppo.cn, FuckRogueSoftware
+DOMAIN, a45090.com-cloud-partner-compacteur-carton-adminwx-twitchdelivered.lb.1.oppo.cn, FuckRogueSoftware
+DOMAIN, a45090.com-cloud-platform-machine-machineelblax-engine.11.1.oppo.cn, FuckRogueSoftware
+DOMAIN, a45090.com-cloud-platform-thread-16-engine.1.1.oppo.cn, FuckRogueSoftware
+DOMAIN, a45090.com-cloud-toolbar-machine-learning-xcx2rd.pc.1.oppo.cn, FuckRogueSoftware
+DOMAIN, a45090.com-cloud-xcx2rdfs-machine-learning-xcx2rd.12.1.oppo.cn, FuckRogueSoftware
+DOMAIN, a45090.com-cloud-xcx2rdfs-machine-mail-xcx2rdpage.pc.1.oppo.cn, FuckRogueSoftware
+DOMAIN, a45090.com-cloud-xcx3rdfs-machine-learning-xcx3rd.pc.1.oppo.cn, FuckRogueSoftware
+DOMAIN, a45090.com-hwhe-i-topic-wxopen-learning-12-swagger.lb.1.oppo.cn, FuckRogueSoftware
+DOMAIN, a45090.com.hw.1.oppo.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, aads.shuzilm.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, aaid.umeng.com, FuckRogueSoftware
+DOMAIN-SUFFIX, aaid.uyunad.com, FuckRogueSoftware
+DOMAIN-SUFFIX, aan.amazon.com, FuckRogueSoftware
+DOMAIN-SUFFIX, aapp.adjust.com, FuckRogueSoftware
+DOMAIN-SUFFIX, aax-us-east-retail-direct.amazon.com, FuckRogueSoftware
+DOMAIN, ab-log.datahou.se, FuckRogueSoftware
+DOMAIN, ab.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, abc.pema.cl, FuckRogueSoftware
+DOMAIN-SUFFIX, abtest-ch.snssdk.com, FuckRogueSoftware
+DOMAIN-SUFFIX, abtest-va-tiktok.byteoversea.com, FuckRogueSoftware
+DOMAIN-SUFFIX, abtest.mistat.india.xiaomi.com, FuckRogueSoftware
+DOMAIN, abtest.mistat.intl.xiaomi.com, FuckRogueSoftware
+DOMAIN-SUFFIX, abtest.mistat.xiaomi.com, FuckRogueSoftware
+DOMAIN-SUFFIX, abtest.volceapplog.com, FuckRogueSoftware
+DOMAIN-WILDCARD, ac*.*cloud.net.cn, FuckRogueSoftware # Retained as DOMAIN-WILDCARD, might be broader than QX.
+DOMAIN-SUFFIX, ac.dun.163.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ac.mmstat.com, FuckRogueSoftware
+DOMAIN, ac.o2.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ac1.cloud.net.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, ac1.dcloud.net.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, ac3.msn.com, FuckRogueSoftware
+DOMAIN-SUFFIX, academy.taplytics.com, FuckRogueSoftware
+DOMAIN-SUFFIX, acb.bet, FuckRogueSoftware
+DOMAIN-SUFFIX, acbp0020171456.page.tl, FuckRogueSoftware
+DOMAIN, access-sngapm.qcloud.com, FuckRogueSoftware
+DOMAIN-SUFFIX, access.toggle.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, account.marketing-google.com, FuckRogueSoftware
+DOMAIN-SUFFIX, accounts.doubleclick.net, FuckRogueSoftware
+DOMAIN-SUFFIX, accscdn.m.taobao.com, FuckRogueSoftware
+DOMAIN-SUFFIX, accuradio.adswizz.com, FuckRogueSoftware
+DOMAIN, ace-tag.advertising.com.sigpolicy.qq.p1.ash.opendns.com, FuckRogueSoftware
+DOMAIN-SUFFIX, acfun-log-sdk.ksapisrv.com, FuckRogueSoftware
+DOMAIN-SUFFIX, acjs.aliyun.com, FuckRogueSoftware
+DOMAIN-SUFFIX, acookie.taobao.com, FuckRogueSoftware
+DOMAIN-SUFFIX, acs.m.taobao.com, FuckRogueSoftware
+DOMAIN-SUFFIX, acs.wapa.taobao.com, FuckRogueSoftware
+DOMAIN-SUFFIX, acs4baichuan.m.taobao.com, FuckRogueSoftware
+DOMAIN-SUFFIX, act.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, act.snssdk.com, FuckRogueSoftware
+DOMAIN-SUFFIX, act.umeng.com, FuckRogueSoftware
+DOMAIN, active.tc.skysrt.com, FuckRogueSoftware
+DOMAIN-SUFFIX, activeqq.3g.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, activity.baidu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, activity.browser.intl.miui.com, FuckRogueSoftware
+DOMAIN-SUFFIX, activity.windows.com, FuckRogueSoftware
+DOMAIN-WILDCARD, ad*.sina.com.cn, FuckRogueSoftware # Retained as DOMAIN-WILDCARD, matches Surge's behavior for leading wildcard.
+DOMAIN-SUFFIX, ad-cdn.qingting.fm, FuckRogueSoftware
+DOMAIN, ad-channel.diwodiwo.xyz, FuckRogueSoftware
+DOMAIN, ad-cmp.hismarttv.com, FuckRogueSoftware
+DOMAIN, ad-display.diwodiwo.xyz, FuckRogueSoftware
+DOMAIN, ad-download.hismarttv.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ad-emea.doubleclick.net, FuckRogueSoftware
+DOMAIN-SUFFIX, ad-exchange.toast.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ad-ggtg-kuaishou-api.37.com.cn, FuckRogueSoftware
+DOMAIN, ad-imp.hismarttv.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ad-log-upload-os.hoyoverse.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ad-log-upload-os.mihoyo.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ad-log-upload.mihoyo.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ad-log.dable.io, FuckRogueSoftware
+DOMAIN, ad-log.wemakeprice.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ad-miner.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ad-sdk-config.youdao.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ad-stat.ksosoft.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ad-tag.inner-active.mobi, FuckRogueSoftware
+DOMAIN-SUFFIX, ad-tj.ntes53.netease.com, FuckRogueSoftware
+DOMAIN-WILDCARD, ad.*.xiaomi.com, FuckRogueSoftware # Retained as DOMAIN-WILDCARD, matches Surge's behavior for wildcards in segments.
+DOMAIN-SUFFIX, ad.10010.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ad.12306.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, ad.12306.cn.wscdns.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ad.163.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ad.360.cn, FuckRogueSoftware
+DOMAIN, ad.adkova.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ad.advst.cp33.ott.cibntv.net, FuckRogueSoftware
+DOMAIN-SUFFIX, ad.alimama.com, FuckRogueSoftware
+DOMAIN, ad.api.3g.tudou.com, FuckRogueSoftware
+DOMAIN, ad.api.3g.youku.com, FuckRogueSoftware
+DOMAIN, ad.api.mobile.youku.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ad.apps.fm, FuckRogueSoftware
+DOMAIN-SUFFIX, ad.baidu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ad.bn.netease.com, FuckRogueSoftware
+DOMAIN, ad.browser.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ad.c.ximalaya.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ad.caiyunapp.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ad.cdnjm.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, ad.cj.sina.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, ad.csdn.net, FuckRogueSoftware
+DOMAIN, ad.cyapi.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, ad.dev.360.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, ad.eu.xiaomi.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ad.gt.cdn.cloudflare.net, FuckRogueSoftware
+DOMAIN, ad.gt.sigpolicy.qq.p1.ash.opendns.com, FuckRogueSoftware
+DOMAIN, ad.gt.sigpolicy.qq.p1.lon.opendns.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ad.hpplay.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, ad.huajiao.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ad.india.xiaomi.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ad.intl.xiaomi.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ad.iot.360.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, ad.jiguang.cn, FuckRogueSoftware
+DOMAIN, ad.kissasian.nz, FuckRogueSoftware
+DOMAIN, ad.kisscartoon.nz, FuckRogueSoftware
+DOMAIN, ad.lgappstv.com, FuckRogueSoftware
+DOMAIN, ad.m.iqiyi.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ad.mail.sohu.com, FuckRogueSoftware
+DOMAIN, ad.mi.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ad.pandora.xiaomi.com, FuckRogueSoftware
+DOMAIN, ad.parkvv.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ad.partner.gifshow.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ad.passport.weibo.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, ad.player.baidu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ad.podbbang.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ad.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ad.rus.xiaomi.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ad.sina.com.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, ad.sohu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ad.thsi.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, ad.toutiao.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ad.tving.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ad.weibo.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ad.weixin.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ad.xelements.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, ad.xiaomi.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ad.ximalaya.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ad.yahoo.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ad.youku.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ad.zijieapi.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ad.zijieapi.com.bytedns1.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ad.zijieapi.com.queniukw.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ad.zijieapi.com.w.cdngslb.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ad.zuimeitianqi.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ad1.xiaomi.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ad2.sina.com.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, ad3.sina.com.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, ad4.sina.com.cn, FuckRogueSoftware
+DOMAIN, ad8641f3cff742de893d919add74c2bb.ssm1.internet.sony.tv, FuckRogueSoftware
+DOMAIN, ad8641f3cff742de893d919add74c2bb.ssm2.internet.sony.tv, FuckRogueSoftware
+DOMAIN-SUFFIX, ada.baidu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adaccount.csdn.net, FuckRogueSoftware
+DOMAIN-SUFFIX, adash-c.m.taobao.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adash-c.ut.taobao.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adash-emas.cn-hangzhou.aliyuncs.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adash.m.taobao.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adash.man.aliyuncs.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adash.ut.taobao.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adashbc.m.taobao.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adashbc.ut.taobao.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adashx.m.taobao.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adashx.m.taobao.com.gds.alibabadns.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adashx.ut.amap.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adashx.ut.dingtalk.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adashx.ut.hzshudian.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adashx.ut.taobao.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adashx4ae.ut.taobao.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adashx4sg.ut.taobao.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adashx4yt.m.taobao.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adashxgc.ut.taobao.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adavideo.baidu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adbehavior.wsa.ximalaya.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adbehavior.ximalaya.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adblock.sina.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, adbox.sina.com.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, adbroker.mp.dse.microsoft.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adbrowser.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adbs.ximalaya.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adc.hpplay.cn, FuckRogueSoftware
+DOMAIN, adc.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adcdn.hpplay.cn, FuckRogueSoftware
+DOMAIN, adcdn.tencentmusic.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adchina.com, FuckRogueSoftware
+DOMAIN, adclick.tencentmusic.com, FuckRogueSoftware
+DOMAIN, adcontrol.tudou.com, FuckRogueSoftware
+DOMAIN-SUFFIX, addthis.com.edgekey.net, FuckRogueSoftware
+DOMAIN, ade.tanx.com, FuckRogueSoftware
+DOMAIN-SUFFIX, aden.baidu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adeng.hpplay.cn, FuckRogueSoftware
+DOMAIN, adexpo.tencentmusic.com, FuckRogueSoftware
+DOMAIN, adextensioncontrol.tudou.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adfilter.imtt.qq.com, FuckRogueSoftware
+DOMAIN, adfl.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adfox.yandex.ru, FuckRogueSoftware
+DOMAIN-SUFFIX, adfstat.yandex.ru, FuckRogueSoftware
+DOMAIN, adgame.waimai.meituan.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adgeo.163.com, FuckRogueSoftware
+DOMAIN, adim.pinduoduo.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adimages.sina.com.hk, FuckRogueSoftware
+DOMAIN-SUFFIX, adimg.163.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adimg.mobile.sina.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, adinfo.ra1.xlmc.sec.miui.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adjust-local-settings.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adjust.net.in, FuckRogueSoftware
+DOMAIN-SUFFIX, adjust.works, FuckRogueSoftware
+DOMAIN-SUFFIX, adlog.vivo.com.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, adlog.vserv.com, FuckRogueSoftware
+DOMAIN, adm.0.oppo.cn, FuckRogueSoftware
+DOMAIN, adm.baidu.cn, FuckRogueSoftware
+DOMAIN, adm.baidu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adm.leju.sina.com.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, admin.adsplay.xyz, FuckRogueSoftware
+DOMAIN-SUFFIX, admind.svideo.tcdn.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adminer.com, FuckRogueSoftware
+DOMAIN, admonitor.qq.com, FuckRogueSoftware
+DOMAIN, admusicpic.music.126.net, FuckRogueSoftware
+DOMAIN-SUFFIX, adn.insight.ucweb.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adnet.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adnet.qq.com, FuckRogueSoftware
+DOMAIN, adnew.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adnexus.net, FuckRogueSoftware
+DOMAIN-SUFFIX, adnxs.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adobetarget.com.edgekey.net, FuckRogueSoftware
+DOMAIN-SUFFIX, adoric-om.com, FuckRogueSoftware
+DOMAIN, adp.atm.youku.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adping.qq.com, FuckRogueSoftware
+DOMAIN, adplay.tudou.com, FuckRogueSoftware
+DOMAIN, adpm.app.qq.com, FuckRogueSoftware
+DOMAIN, adrdir.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adreq.togothermany.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, adreq.vivo.com.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, adrevenue.appsflyer.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adrevenue.appsflyersdk.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads-a.juicyads.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads-api-sandbox.twitter.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads-api.twitter.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads-api.x.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads-bidder-api.twitter.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads-exchange-sdk-diag.prd.mon.corp.unity3d.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads-exchange-sdk-diag.stg.mon.corp.unity3d.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads-exchange-shared.prd.mon.corp.unity3d.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads-g.juicyads.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads-game-configuration-master.ads.prd.ie.internal.unity3d.com, FuckRogueSoftware
+DOMAIN, ads-img-al.xhscdn.com.w.cdngslb.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads-marketing-vivofs.vivo.com.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, ads-privacy-api.prd.mz.internal.unity3d.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads-sdk-gateway.prd.mz.internal.unity3d.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads-sdk.mattel163.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads-setu-proxy-eu.amazon.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads-setu-proxy.amazon.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads-twitter.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads-union.jd.com, FuckRogueSoftware
+DOMAIN, ads-video-al.xhscdn.com.w.cdngslb.com, FuckRogueSoftware
+DOMAIN, ads.95516.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads.95516.com.wscdns.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads.ad4game.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads.adthrive.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads.amazon.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads.auctions.yahoo.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads.bf1.yahoo.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads.bing.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads.corp.bf1.yahoo.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads.corp.gq1.yahoo.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads.corp.yahoo.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads.csdn.net, FuckRogueSoftware
+DOMAIN-SUFFIX, ads.emol.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads.eu.msn.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads.facebook.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads.finance.yahoo.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads.fy.b.yahoo.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads.gfsrv.net, FuckRogueSoftware
+DOMAIN-SUFFIX, ads.gogel.al, FuckRogueSoftware
+DOMAIN-SUFFIX, ads.gq1.yahoo.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads.juicyads.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads.mediaforge.com.edgekey.net, FuckRogueSoftware
+DOMAIN-SUFFIX, ads.microsoft.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads.mondogames.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads.msn.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads.ne1.yahoo.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads.netflix.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads.prd.ie.internal.unity3d.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads.privacy.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads.rttnews.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads.sina.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads.sina.com.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, ads.skillz.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads.sohu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads.test.netflix.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads.tiktok.com.edgekey.net, FuckRogueSoftware
+DOMAIN-SUFFIX, ads.twitter.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads.uc.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, ads.umeng.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads.unitychina.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, ads.vip.bf1.yahoo.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads.vip.corp.bf1.yahoo.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads.vip.corp.gq1.yahoo.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads.vip.corp.yahoo.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads.vip.gq1.yahoo.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads.vip.ir2.yahoo.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads.vip.ne1.yahoo.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads.vip.sg3.yahoo.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads.vip.tp2.yahoo.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads.vungle.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads.x.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads.yahoo.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads.yandex.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads1.medium.al, FuckRogueSoftware
+DOMAIN-SUFFIX, ads1.msads.net, FuckRogueSoftware
+DOMAIN-SUFFIX, ads1.msn.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads2.msn.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads3-normal-hl.zijieapi.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads3-normal-lf.zijieapi.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads3-normal-lq.zijieapi.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads3-normal.zijieapi.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads5-normal-hl.zijieapi.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads5-normal-hl.zijieapi.com.c.dsa.cdnbuild.net, FuckRogueSoftware
+DOMAIN-SUFFIX, ads5-normal-lf.zijieapi.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads5-normal-lf.zijieapi.com.c.dsa.cdnbuild.net, FuckRogueSoftware
+DOMAIN-SUFFIX, ads5-normal-lq.zijieapi.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ads5-normal-lq.zijieapi.com.c.dsa.cdnbuild.net, FuckRogueSoftware
+DOMAIN-SUFFIX, ads5-normal.zijieapi.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adsapi.togothermany.cn, FuckRogueSoftware
+DOMAIN, adscdn.baidu.cn, FuckRogueSoftware
+DOMAIN, adscdn.baidu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adscfg.togothermany.cn, FuckRogueSoftware
+DOMAIN, adsclick.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adsclick.yx.js.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, adsdk.microsoft.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adsdk.vivo.com.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, adsdk.yandex.ru, FuckRogueSoftware
+DOMAIN-SUFFIX, adse.wsa.ximalaya.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adse.ximalaya.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adsebs.ximalaya.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adsehera.ximalaya.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adsense.google.com, FuckRogueSoftware
+DOMAIN, adsense.html5.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adserver-a.juicyads.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adserver-api-dev.juicyads.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adserver-b.juicyads.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adserver.bing.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adserver.juicyads.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adserver.yahoo.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adservice.chsmarttv.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adservice.google.am, FuckRogueSoftware
+DOMAIN-SUFFIX, adservice.google.az, FuckRogueSoftware
+DOMAIN-SUFFIX, adservice.google.cm, FuckRogueSoftware
+DOMAIN-SUFFIX, adservice.google.co.zw, FuckRogueSoftware
+DOMAIN-SUFFIX, adservice.google.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adservice.google.com.cy, FuckRogueSoftware
+DOMAIN-SUFFIX, adservice.google.com.jm, FuckRogueSoftware
+DOMAIN-SUFFIX, adservice.google.com.kw, FuckRogueSoftware
+DOMAIN-SUFFIX, adservice.google.com.mm, FuckRogueSoftware
+DOMAIN-SUFFIX, adservice.google.com.om, FuckRogueSoftware
+DOMAIN-SUFFIX, adservice.google.com.sv, FuckRogueSoftware
+DOMAIN-SUFFIX, adservice.google.com.uy, FuckRogueSoftware
+DOMAIN-SUFFIX, adservice.google.dm, FuckRogueSoftware
+DOMAIN-SUFFIX, adservice.google.gm, FuckRogueSoftware
+DOMAIN-SUFFIX, adservice.google.mv, FuckRogueSoftware
+DOMAIN-SUFFIX, adservice.google.mw, FuckRogueSoftware
+DOMAIN-SUFFIX, adservice.google.rw, FuckRogueSoftware
+DOMAIN-SUFFIX, adservice.google.tl, FuckRogueSoftware
+DOMAIN-SUFFIX, adservrs.com.edgekey.net, FuckRogueSoftware
+DOMAIN-SUFFIX, adsfile.qq.com, FuckRogueSoftware
+DOMAIN, adsgroup.qq.com, FuckRogueSoftware
+DOMAIN, adsh.m.taobao.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adsh.wagbridge.taobao.alimama.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adsh.wagbridge.tmall.alimama.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adshare.toutiao.com, FuckRogueSoftware
+DOMAIN, adshmct.qq.com, FuckRogueSoftware
+DOMAIN, adshmmsg.qq.com, FuckRogueSoftware
+DOMAIN, adslvfile.qq.com, FuckRogueSoftware
+DOMAIN, adslvseed.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adsmind.apdcdn.tc.qq.com, FuckRogueSoftware
+DOMAIN, adsmind.gdtimg.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adsmind.gdtimg.com.tcdn.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adsmind.tc.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adsmind.ugdtimg.com.tcdn.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adsolution.imtt.qq.com, FuckRogueSoftware
+DOMAIN, adsqqclick.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adsrich.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adss.video.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adsstatic.vivo.com.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, adstatic.zhihu.com, FuckRogueSoftware
+DOMAIN, adstestview.qq.com, FuckRogueSoftware
+DOMAIN, adstextview.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adsup.togothermany.cn, FuckRogueSoftware
+DOMAIN, adsview.qq.com, FuckRogueSoftware
+DOMAIN, adsview2.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adsyndication.msn.com, FuckRogueSoftware
+DOMAIN, adsz.wagbridge.tanx.alimama.com.gds.alibabadns.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adsz.wagbridge.taobao.alimama.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adsz.wagbridge.tmall.alimama.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adt.shuzilm.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, adtago.s3.amazonaws.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adtechvideo.s3.amazonaws.com, FuckRogueSoftware
+DOMAIN, adtoken.v.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adtrack-intl.ucweb.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adtrack.ucweb.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adv.app.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adv.ccb.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adv.sec.intl.miui.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adv.sec.miui.com, FuckRogueSoftware
+DOMAIN, adver.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, advert-prod.hyrz.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, advert.lx.netease.com, FuckRogueSoftware
+DOMAIN-SUFFIX, advert.qq.com, FuckRogueSoftware
+DOMAIN, advertisement.taobao.com.gds.alibabadns.com, FuckRogueSoftware
+DOMAIN-SUFFIX, advertising-api-eu.amazon.com, FuckRogueSoftware
+DOMAIN-SUFFIX, advertising-api-fe.amazon.com, FuckRogueSoftware
+DOMAIN-SUFFIX, advertising-eu.amazon.com, FuckRogueSoftware
+DOMAIN-SUFFIX, advertising.amazon.com, FuckRogueSoftware
+DOMAIN-SUFFIX, advertising.amazon.com.edgekey.net, FuckRogueSoftware
+DOMAIN-SUFFIX, advertising.amazon.de, FuckRogueSoftware
+DOMAIN-SUFFIX, advertising.apple.com, FuckRogueSoftware
+DOMAIN, advertising.com.sigpolicy.qq.p1.ash.opendns.com, FuckRogueSoftware
+DOMAIN-SUFFIX, advertising.microsoft.com, FuckRogueSoftware
+DOMAIN-SUFFIX, advertising.ttnews.com, FuckRogueSoftware
+DOMAIN-SUFFIX, advertising.twitter.com, FuckRogueSoftware
+DOMAIN-SUFFIX, advertising.yahoo.com, FuckRogueSoftware
+DOMAIN-SUFFIX, advice-ads.s3.amazonaws.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adwbs.ximalaya.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adx-dra.op.hicloud.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adx-dre.op.dbankcloud.com.edgekey.net, FuckRogueSoftware
+DOMAIN-SUFFIX, adx-dre.op.hicloud.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adx-static.ksosoft.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adx-tk.mtgglobals.com, FuckRogueSoftware
+DOMAIN, adx.qq.com, FuckRogueSoftware
+DOMAIN, adx.tanx.com, FuckRogueSoftware
+DOMAIN-SUFFIX, adxlog-adnet.vivo.com.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, adxlog.vivo.com.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, adxserver.ad.cmvideo.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, ae.mmstat.com, FuckRogueSoftware
+DOMAIN-SUFFIX, aeapp.adjust.com, FuckRogueSoftware
+DOMAIN-SUFFIX, aecpm.alicdn.com, FuckRogueSoftware
+DOMAIN-SUFFIX, aedns.weixin.qq.com, FuckRogueSoftware
+DOMAIN, aegis.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, aeros01.tk, FuckRogueSoftware
+DOMAIN-SUFFIX, aeros02.tk, FuckRogueSoftware
+DOMAIN-SUFFIX, aeros11.tk, FuckRogueSoftware
+DOMAIN-SUFFIX, aeros12.tk, FuckRogueSoftware
+DOMAIN-SUFFIX, af-event-logger.appsflyer.com, FuckRogueSoftware
+DOMAIN, afd.baidu.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, afd.baidu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, afminer.com, FuckRogueSoftware
+DOMAIN, afp.adchina.com, FuckRogueSoftware
+DOMAIN, afp.alicdn.com, FuckRogueSoftware
+DOMAIN, afp.iqiyi.com, FuckRogueSoftware
+DOMAIN, afp.qiyi.com, FuckRogueSoftware
+DOMAIN-SUFFIX, afpmm.alicdn.com, FuckRogueSoftware
+DOMAIN-SUFFIX, afpssp.alimama.com, FuckRogueSoftware
+DOMAIN-SUFFIX, afvpn.appsflyer.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ag.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, agd.p.360.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, agd2.p.360.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, agent-proxy.baidu.com, FuckRogueSoftware
+DOMAIN, agent.sj.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, agoo-report.m.taobao.com, FuckRogueSoftware
+DOMAIN, agoodm.m.taobao.com, FuckRogueSoftware
+DOMAIN, agoodm.wapa.taobao.com, FuckRogueSoftware
+DOMAIN-SUFFIX, agstat.html5.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ai.login.umeng.com, FuckRogueSoftware
+DOMAIN, ai.m.taobao.com, FuckRogueSoftware
+DOMAIN, ai.taobao.com, FuckRogueSoftware
+DOMAIN, aic-ngfts.lge.com, FuckRogueSoftware
+DOMAIN-SUFFIX, aic-report.volces.com, FuckRogueSoftware
+DOMAIN-SUFFIX, aid.mobileservice.cn, FuckRogueSoftware
+DOMAIN, aid.video.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, aidps.atdmt.com, FuckRogueSoftware
+DOMAIN-SUFFIX, aip.baidubce.com, FuckRogueSoftware
+DOMAIN, airdrop-screen.hismarttv.com, FuckRogueSoftware
+DOMAIN-SUFFIX, aka-cdn-ns.adtech.de, FuckRogueSoftware
+DOMAIN-SUFFIX, akdenizgercekcomtr.teimg.com, FuckRogueSoftware
+DOMAIN-SUFFIX, aksia.co, FuckRogueSoftware
+DOMAIN-SUFFIX, alaboyuyan.umeng.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ald.taobao.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ali-stats.jpush.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, alimama.alicdn.com, FuckRogueSoftware
+DOMAIN-SUFFIX, alink.volceapplog.com, FuckRogueSoftware
+DOMAIN-SUFFIX, alipaylog.com, FuckRogueSoftware
+DOMAIN-SUFFIX, allfootballapp.umeng.com, FuckRogueSoftware
+DOMAIN-SUFFIX, allyes.com, FuckRogueSoftware
+DOMAIN-SUFFIX, alog-default.umeng.com, FuckRogueSoftware
+DOMAIN-SUFFIX, alog.umeng.co, FuckRogueSoftware
+DOMAIN-SUFFIX, alog.umeng.com, FuckRogueSoftware
+DOMAIN-SUFFIX, alog.umengcloud.com, FuckRogueSoftware
+DOMAIN-SUFFIX, alogs.umeng.com, FuckRogueSoftware
+DOMAIN-SUFFIX, alogs.umengcloud.com, FuckRogueSoftware
+DOMAIN-SUFFIX, alogsus.umeng.com, FuckRogueSoftware
+DOMAIN-SUFFIX, alogus.umeng.com, FuckRogueSoftware
+DOMAIN-SUFFIX, alon.umeng.com, FuckRogueSoftware
+DOMAIN-SUFFIX, alpha.telemetry.microsft.com, FuckRogueSoftware
+DOMAIN-SUFFIX, alphonso.tv, FuckRogueSoftware
+DOMAIN-SUFFIX, als.baidu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, amap-aos-info-nogw.amap.com, FuckRogueSoftware
+DOMAIN-SUFFIX, amazon-adsystem.amazon.com, FuckRogueSoftware
+DOMAIN-SUFFIX, amazon-adsystem.com, FuckRogueSoftware
+DOMAIN-SUFFIX, amazon-adsystems.com, FuckRogueSoftware
+DOMAIN-SUFFIX, amdc.alipay.com, FuckRogueSoftware
+DOMAIN-SUFFIX, amdc.m.taobao.com, FuckRogueSoftware
+DOMAIN-SUFFIX, amdcopen.m.taobao.com, FuckRogueSoftware
+DOMAIN-SUFFIX, amnet.adswizz.com, FuckRogueSoftware
+DOMAIN, amos.alicdn.com, FuckRogueSoftware
+DOMAIN-SUFFIX, amos1.taobao.com, FuckRogueSoftware
+DOMAIN-SUFFIX, amp-analytics.newshub.co.nz, FuckRogueSoftware
+DOMAIN-SUFFIX, amp.appsflyer.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ampcid.google.am, FuckRogueSoftware
+DOMAIN-SUFFIX, ampcid.google.cm, FuckRogueSoftware
+DOMAIN-SUFFIX, ampcid.google.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ampcid.google.dm, FuckRogueSoftware
+DOMAIN-SUFFIX, ampcid.google.gm, FuckRogueSoftware
+DOMAIN-SUFFIX, ampcid.google.im, FuckRogueSoftware
+DOMAIN-SUFFIX, ampcid.google.tl, FuckRogueSoftware
+DOMAIN-SUFFIX, ams-zabbix.adjust.com, FuckRogueSoftware
+DOMAIN-SUFFIX, an.facebook.com, FuckRogueSoftware
+DOMAIN, analy.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, analysis.chatglm.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics-alv.google.com, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics-api-01.smzdm.com, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics-api.smzdm.com, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics-cdn.sport.es, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics-dev-lleap-events.servicebus.windows.net, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics-ios-tcp.mtgglobals.com, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics-ios.mtgglobals.com, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics-log.withhive.com, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics-log.withhive.com.edgekey.net, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics-tcp.mtgglobals.com, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics-webhook.doximity.services, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.126.net, FuckRogueSoftware
+DOMAIN, analytics.126.net.w.cdngslb.com, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.163.com, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.74.ru, FuckRogueSoftware
+DOMAIN, analytics.95516.com, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.95516.com.wscdns.com, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.adjust.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.adjust.io, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.adjust.world, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.adtrue.com, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.adxpremium.services, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.afirstsoft.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.afirstsoft.cn.cdn.cloudflare.net, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.alloka.ru, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.amazon.com, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.analyticsbaidu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.atlassian.com, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.bid.yahoo.com, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.bkav.com, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.blue, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.buy.yahoo.com, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.cadillac.com.edgekey.net, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.chevrolet.com.edgekey.net, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.ci-360.se, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.clients6.google.com, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.cloud.unity3d.com, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.cn.ru, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.cnblogs.com, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.cookiefirst.dev, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.credible.com.cdn.cloudflare.net, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.dealmoon.com.edgekey.net, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.e1.ru, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.edgekey.net, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.emol.com, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.etoro.com.edgekey.net, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.facebook.com, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.fbgcdn.com.edgekey.net, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.ff.avast.sec.miui.com, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.flatart.agency, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.fontanka.ru, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.gismart.xyz, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.gmc.com.edgekey.net, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.gnetworks.xyz, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.gridea.dev, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.hz.netease.com, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.immersivetranslate.com, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.insightly.services, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.intern.b1-systems.de, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.itunes.apple.com, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.jd-powered.net, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.libertymutual.com.edgekey.net, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.live.com, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.mall.yahoo.com, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.map.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.matetranslate.com, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.meituan.com, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.meituan.net, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.mercadolibre.com.uy, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.metro-cc.ru, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.mobile-messenger.intercom.com, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.mobile.yandex.net, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.mobilegamestats.com, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.move.ru, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.mpay.netease.com, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.msk1.ru, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.mtgglobals.com, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.neoogilvy.uy, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.nexon.com, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.ngs.ru, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.ngs55.ru, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.nike.com.edgekey.net, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.notify.elsevier.com.cdn.cloudflare.net, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.ouryahoo.com, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.pgncs.notion.so, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.pipelife.hu, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.pipelife.lv, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.play.works, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.query.yahoo.com, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.rotapost.ru, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.s3.amazonaws.com, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.sandbox.alloka.ru, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.search.amazon.com, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.send.cm, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.services.jetbrains.com, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.shift.agency, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.sieuviet.services, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.sixt.es, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.snssdk.com, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.sports.ru, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.staging.alloka.ru, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.status.atlassian.com, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.taobao.com, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.techweb.com.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.tiktok.com.edgekey.net, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.trafficfactory.biz, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.twitter.com, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.tylenol.com, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.uca.cloud.unity3d.com, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.umami.is, FuckRogueSoftware
+DOMAIN, analytics.umetrip.com, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.unity3d.com, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.us.umami.is, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.walkme.com.edgekey.net, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.wienerberger.al, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.wienerberger.bg, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.wienerberger.fi, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.wienerberger.pl, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.wikimedia.org, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.ws.126.net, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.x.com, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.xmslol.com, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.yahoo.com, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.yandex.by, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.yandex.kz, FuckRogueSoftware
+DOMAIN-SUFFIX, analytics.zendesk.com, FuckRogueSoftware
+DOMAIN-SUFFIX, analyticsehnwe.servicebus.windows.net, FuckRogueSoftware
+DOMAIN-SUFFIX, analyticsengine.s3.amazonaws.com, FuckRogueSoftware
+DOMAIN-SUFFIX, analyticspixel.microsoft.com, FuckRogueSoftware
+DOMAIN-SUFFIX, andeyeplus.umeng.com, FuckRogueSoftware
+DOMAIN-SUFFIX, andlache.com, FuckRogueSoftware
+DOMAIN-SUFFIX, androidapp.baidu.com, FuckRogueSoftware
+DOMAIN, androidrqd.iot.wechatpay.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, ani.adspruce.com, FuckRogueSoftware
+DOMAIN-SUFFIX, aniview.com.edgekey.net, FuckRogueSoftware
+DOMAIN, anony-auth.hismarttv.com, FuckRogueSoftware
+DOMAIN, anquan.baidu.cn, FuckRogueSoftware
+DOMAIN, anquan.baidu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ansj.umeng.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ansjer.umeng.com, FuckRogueSoftware
+DOMAIN-SUFFIX, anti-bot.baidu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, anti-sdk-ccs.m.jd.com, FuckRogueSoftware
+DOMAIN-SUFFIX, anti-sdk-report.m.jd.com, FuckRogueSoftware
+DOMAIN-SUFFIX, antibot.qq.com, FuckRogueSoftware
+DOMAIN, antivirus.baidu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, anybest.pw, FuckRogueSoftware
+DOMAIN-SUFFIX, ap-south-1.compute.amazonaws.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ap-south-1.elb.amazonaws.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ap.adjust.io, FuckRogueSoftware
+DOMAIN-SUFFIX, ap.yandex-net.ru, FuckRogueSoftware
+DOMAIN-SUFFIX, ap2.qiyukf.com, FuckRogueSoftware
+DOMAIN-SUFFIX, apac.zendesk.com, FuckRogueSoftware
+DOMAIN-KEYWORD, api-*.mixpanel.com, FuckRogueSoftware # Changed from HOST-WILDCARD, api-*.mixpanel.com
+DOMAIN, api-access.pangolin-sdk-toutiao-b.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api-access.pangolin-sdk-toutiao-b.com.w.cdngslb.com, FuckRogueSoftware
+DOMAIN, api-access.pangolin-sdk-toutiao.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api-access.pangolin-sdk-toutiao.com.w.cdngslb.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api-access.pangolin-sdk-toutiao1.com.w.cdngslb.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api-adservices.apple.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api-analytics-cn.huami.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api-analytics-de.huami.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api-analytics-in.huami.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api-analytics-ru.huami.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api-analytics-sg.huami.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api-analytics-us.huami.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api-analytics.huami.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api-article-bj.fengkongcloud.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api-audio-gg.fengkongcloud.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api-audio-sh.fengkongcloud.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api-audio-xjp.fengkongcloud.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api-audiostream-gg.fengkongcloud.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api-audiostream-sh.fengkongcloud.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api-audiostream-xjp.fengkongcloud.com, FuckRogueSoftware
+DOMAIN, api-bos.hismarttv.com, FuckRogueSoftware
+DOMAIN, api-cloudfalcon.hismarttv.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api-compatible.mixpanel.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api-devapp.getui.com, FuckRogueSoftware
+DOMAIN, api-dynDOMAIN.hismarttv.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api-eu.mixpanel.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api-extra.hzjizhun.com, FuckRogueSoftware
+DOMAIN, api-fd.dutils.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api-gi.getui.com, FuckRogueSoftware
+DOMAIN, api-gps-em.hismarttv.com, FuckRogueSoftware
+DOMAIN, api-gps-na.hismarttv.com, FuckRogueSoftware
+DOMAIN, api-gps.hismarttv.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api-iam.intercom.io, FuckRogueSoftware
+DOMAIN-SUFFIX, api-ipv4.browser.miui.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api-js.mixpanel.com, FuckRogueSoftware
+DOMAIN, api-launcher-em.hismarttv.com, FuckRogueSoftware
+DOMAIN, api-launcher-na.hismarttv.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api-log-analytics.cloud.toast.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api-log.immomo.com, FuckRogueSoftware
+DOMAIN, api-mf1.meta.ndmdhs.com, FuckRogueSoftware
+DOMAIN, api-report.q.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api-secure.mixpanel.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api-share.mob.com, FuckRogueSoftware
+DOMAIN, api-shoppingguider.hismarttv.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api-skynet-bj.fengkongcloud.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api-skynet-eur.fengkongcloud.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api-skynet-fjny.fengkongcloud.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api-skynet-xjp.fengkongcloud.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api-spe-a.isnssdk.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api-spe-a.sgsnssdk.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api-spe-b.isnssdk.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api-spe-b.sgsnssdk.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api-spe-c.isnssdk.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api-spe-c.sgsnssdk.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api-spe.isnssdk.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api-spe.sgsnssdk.com, FuckRogueSoftware
+DOMAIN, api-t.iqiyi.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api-test-pcs.snssdk.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api-tianxiang-bj.fengkongcloud.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api-tianxiang-eur.fengkongcloud.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api-tianxiang-fjny.fengkongcloud.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api-tianxiang-xjp.fengkongcloud.com, FuckRogueSoftware
+DOMAIN, api-unionid.meituan.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api-vidaaasst.hismarttv.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api-visitor-analytics.intercom.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api-visitor-analytics.mobile-messenger.intercom.com, FuckRogueSoftware
+DOMAIN, api.253.com, FuckRogueSoftware
+DOMAIN, api.activity.browser.intl.miui.com, FuckRogueSoftware
+DOMAIN, api.activity.browser.miui.com, FuckRogueSoftware
+DOMAIN, api.admob.xiaomi.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api.adnet.mob.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api.adsplay.xyz, FuckRogueSoftware
+DOMAIN-SUFFIX, api.analytics.jpush.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, api.apflyer.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api.applink.mob.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api.appsflyer.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api.appsflyersdk.com, FuckRogueSoftware
+DOMAIN, api.bbs.miui.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api.branch.io, FuckRogueSoftware
+DOMAIN-SUFFIX, api.browser.miui.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api.browsermine.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api.brs.intl.miui.com, FuckRogueSoftware
+DOMAIN, api.byteair.volces.com, FuckRogueSoftware
+DOMAIN, api.chcatv.hismarttv.com, FuckRogueSoftware
+DOMAIN, api.cid.samba.tv, FuckRogueSoftware
+DOMAIN-SUFFIX, api.collect.data.intl.miui.com, FuckRogueSoftware
+DOMAIN, api.comm.miui.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api.cortana.ai, FuckRogueSoftware
+DOMAIN-SUFFIX, api.crashlytics.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api.cupid.dns.iqiyi.com, FuckRogueSoftware
+DOMAIN, api.cupid.iqiyi.com, FuckRogueSoftware
+DOMAIN, api.cupid.qiyi.com, FuckRogueSoftware
+DOMAIN, api.d.xiaomi.com, FuckRogueSoftware
+DOMAIN, api.danmu.tv.sohu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api.developer.xiaomi.com, FuckRogueSoftware
+DOMAIN, api.distribution.hulu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api.e.mi.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api.edgeoffer.microsoft.com, FuckRogueSoftware
+DOMAIN, api.eu.hismarttv.com, FuckRogueSoftware
+DOMAIN, api.euro.hismarttv.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api.exc.mob.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api.fc.mob.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api.fd.mob.com, FuckRogueSoftware
+DOMAIN, api.getkoala.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api.getui.com, FuckRogueSoftware
+DOMAIN, api.globalphone.hismarttv.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api.hismarttv.com, FuckRogueSoftware
+DOMAIN, api.hoisin.hw.coocaatv.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api.installer.xiaomi.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api.intercom.io, FuckRogueSoftware
+DOMAIN-SUFFIX, api.inwemo.com, FuckRogueSoftware
+DOMAIN, api.io.mi.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api.jpush.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, api.jr.mi.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api.juicyads.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api.k.sohu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api.miner.beeppool.org, FuckRogueSoftware
+DOMAIN-SUFFIX, api.miui.security.xiaomi.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api.miwifi.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api.mixpanel.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api.mobojoy.baidu.com, FuckRogueSoftware
+DOMAIN, api.mp.uc.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, api.newsfeed.intl.miui.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api.poll.video.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api.pr.weixin.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api.privacymanager.io, FuckRogueSoftware
+DOMAIN, api.sa.hismarttv.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api.sec.intl.miui.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api.sec.miui.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api.setting.intl.miui.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api.shuzilm.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, api.talkingdata.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api.taplytics.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api.telemetrydeck.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api.ts.feedback.qy.net, FuckRogueSoftware
+DOMAIN-SUFFIX, api.uca.cloud.unity3d.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api.umeng.com, FuckRogueSoftware
+DOMAIN, api.us.hismarttv.com, FuckRogueSoftware
+DOMAIN, api.v1.dailypad.cn, FuckRogueSoftware
+DOMAIN, api.wapa.taobao.com, FuckRogueSoftware
+DOMAIN, api.waptest.taobao.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api.wsq.umeng.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api.yky.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api.youtu.qq.com, FuckRogueSoftware
+DOMAIN, api.yuedu.iqiyi.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api1.shuzilm.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, api16-log-gcp.pangle.io, FuckRogueSoftware
+DOMAIN-SUFFIX, api16-log-sg.pangle.io, FuckRogueSoftware
+DOMAIN-SUFFIX, api2.appsflyer.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api2.appsflyersdk.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api2.branch.io, FuckRogueSoftware
+DOMAIN-SUFFIX, api3.adspruce.com, FuckRogueSoftware
+DOMAIN-SUFFIX, api4report.adsplay.xyz, FuckRogueSoftware
+DOMAIN-SUFFIX, apidns-js.kwd.inkuai.com, FuckRogueSoftware
+DOMAIN-SUFFIX, apidns.kwd.inkuai.com, FuckRogueSoftware
+DOMAIN-SUFFIX, apiinit.amap.com, FuckRogueSoftware
+DOMAIN, apikey.map.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, apissug-sf.ucweb.com, FuckRogueSoftware
+DOMAIN-KEYWORD, apm-log-upload-*.mihoyo.com, FuckRogueSoftware # Changed from HOST-WILDCARD
+DOMAIN-SUFFIX, apm-log-upload-os.hoyoverse.com, FuckRogueSoftware
+DOMAIN-SUFFIX, apm-log-upload-v6.mihoyo.com, FuckRogueSoftware
+DOMAIN-SUFFIX, apm-log-upload-v6.mihoyo.com.w.kunluncan.com, FuckRogueSoftware
+DOMAIN-SUFFIX, apm-log-upload.mihoyo.com, FuckRogueSoftware
+DOMAIN-SUFFIX, apm-log-upload.mihoyo.com.w.kunluncan.com, FuckRogueSoftware
+DOMAIN-SUFFIX, apm.douyucdn.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, apm.music.163.com, FuckRogueSoftware
+DOMAIN-SUFFIX, apm.umeng.com, FuckRogueSoftware
+DOMAIN-SUFFIX, apm.zhihu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, apmconfig.douyucdn.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, apmplus.volces.com, FuckRogueSoftware
+DOMAIN-SUFFIX, apmplus.volces.com.queniusz.com, FuckRogueSoftware
+DOMAIN-SUFFIX, apns-recv.jpush.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, apoll.m.taobao.com, FuckRogueSoftware
+DOMAIN-SUFFIX, app-analytics-cn.huami.com, FuckRogueSoftware
+DOMAIN-SUFFIX, app-analytics-de.huami.com, FuckRogueSoftware
+DOMAIN-SUFFIX, app-analytics-in.huami.com, FuckRogueSoftware
+DOMAIN-SUFFIX, app-analytics-ru.huami.com, FuckRogueSoftware
+DOMAIN-SUFFIX, app-analytics-services.com, FuckRogueSoftware
+DOMAIN-SUFFIX, app-analytics-sg.huami.com, FuckRogueSoftware
+DOMAIN-SUFFIX, app-analytics-us.huami.com, FuckRogueSoftware
+DOMAIN-SUFFIX, app-analytics.huami.com, FuckRogueSoftware
+DOMAIN-SUFFIX, app-log.dewu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, app-log.immomo.com, FuckRogueSoftware
+DOMAIN, app-measurement.com, FuckRogueSoftware
+DOMAIN-SUFFIX, app.adjust.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, app.adjust.com, FuckRogueSoftware
+DOMAIN-SUFFIX, app.adjust.io, FuckRogueSoftware
+DOMAIN-SUFFIX, app.adjust.net.in, FuckRogueSoftware
+DOMAIN-SUFFIX, app.adjust.world, FuckRogueSoftware
+DOMAIN-SUFFIX, app.appsflyer.com, FuckRogueSoftware
+DOMAIN-SUFFIX, app.appsflyersdk.com, FuckRogueSoftware
+DOMAIN-SUFFIX, app.bidflyer.com, FuckRogueSoftware
+DOMAIN-SUFFIX, app.chat.xiaomi.net, FuckRogueSoftware
+DOMAIN-SUFFIX, app.launchdarkly.com, FuckRogueSoftware
+DOMAIN, app.miui.com, FuckRogueSoftware
+DOMAIN-SUFFIX, app.singular.live, FuckRogueSoftware
+DOMAIN-SUFFIX, app.umeng.com, FuckRogueSoftware
+DOMAIN-SUFFIX, app.us.adjust.com, FuckRogueSoftware
+DOMAIN-SUFFIX, appapp.adjust.com, FuckRogueSoftware
+DOMAIN-SUFFIX, appc.baidu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, appcfg.v.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, appchannel.html5.qq.com, FuckRogueSoftware
+DOMAIN, appcloud2.in.zhihu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, appcloud2.zhihu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, appcpa.net, FuckRogueSoftware
+DOMAIN-SUFFIX, appdownload.alicdn.com, FuckRogueSoftware
+DOMAIN-SUFFIX, appgallery.cloud.huawei.com, FuckRogueSoftware
+DOMAIN-SUFFIX, appjiagu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, appl.umeng.com, FuckRogueSoftware
+DOMAIN-SUFFIX, apple-finance.query.yahoo.com, FuckRogueSoftware
+DOMAIN-SUFFIX, applink.mob.com, FuckRogueSoftware
+DOMAIN-SUFFIX, applk.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, applog-hl.fqnovel.com, FuckRogueSoftware
+DOMAIN-SUFFIX, applog-lq.fqnovel.com, FuckRogueSoftware
+DOMAIN-SUFFIX, applog-perf.uc.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, applog.fqnovel.com, FuckRogueSoftware
+DOMAIN-SUFFIX, applog.manmanbuy.com, FuckRogueSoftware
+DOMAIN-SUFFIX, applog.matrix.easebar.com, FuckRogueSoftware
+DOMAIN-SUFFIX, applog.reader.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, applog.snssdk.com, FuckRogueSoftware
+DOMAIN-SUFFIX, applog.uc.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, applog.ucdns.uc.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, applog.zijieapi.com, FuckRogueSoftware
+DOMAIN-SUFFIX, applogios.uc.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, applogs.yunyihudong.com, FuckRogueSoftware
+DOMAIN-SUFFIX, applovin.com.edgekey.net, FuckRogueSoftware
+DOMAIN-SUFFIX, appmetrica.yandex.com, FuckRogueSoftware
+DOMAIN, apponline.research.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, apppush-sh5.xiaohongshu.com, FuckRogueSoftware
+DOMAIN, appsec-mobile.meituan.com, FuckRogueSoftware
+DOMAIN-SUFFIX, appservice.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, appsflyer-web-1810875176.eu-west-1.elb.amazonaws.com, FuckRogueSoftware
+DOMAIN-SUFFIX, appsflyer-web-2-1926050047.eu-west-1.elb.amazonaws.com, FuckRogueSoftware
+DOMAIN-SUFFIX, appsflyer-web-3-1052820924.eu-west-1.elb.amazonaws.com, FuckRogueSoftware
+DOMAIN-SUFFIX, appsflyer-web-4-962407740.eu-west-1.elb.amazonaws.com, FuckRogueSoftware
+DOMAIN-SUFFIX, appsflyer.com.akamaized.net, FuckRogueSoftware
+DOMAIN-SUFFIX, appsflyersdk.com.DOMAIN.name, FuckRogueSoftware
+DOMAIN-SUFFIX, appsflyersdk.com.edgekey.net, FuckRogueSoftware
+DOMAIN-SUFFIX, appspot-preview.l.google.com, FuckRogueSoftware
+DOMAIN-SUFFIX, appstore.browser.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, appsupport.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, appswitch.adups.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, apsrgeo.amap.com, FuckRogueSoftware
+DOMAIN-SUFFIX, aq.adjust.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ar.hz.netease.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ar.umeng.com, FuckRogueSoftware
+DOMAIN-SUFFIX, arapp.adjust.com, FuckRogueSoftware
+DOMAIN-SUFFIX, archive.adjust.io, FuckRogueSoftware
+DOMAIN-SUFFIX, ark.cp21.ott.cibntv.net, FuckRogueSoftware
+DOMAIN-SUFFIX, ars.appsflyersdk.com, FuckRogueSoftware
+DOMAIN-SUFFIX, as-sec.casalemedia.com.cdn.cloudflare.net, FuckRogueSoftware
+DOMAIN-SUFFIX, as.aw.mt.mob.com, FuckRogueSoftware
+DOMAIN-SUFFIX, as.baidu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, as.cfcdist.loan, FuckRogueSoftware
+DOMAIN, as.mgtv.com, FuckRogueSoftware
+DOMAIN-SUFFIX, as.weixin.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, as1.wenku.baidu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, asearch.alicdn.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ashgrrwt.click, FuckRogueSoftware
+DOMAIN-SUFFIX, asiaapp.adjust.com, FuckRogueSoftware
+DOMAIN-SUFFIX, asimov-win.settings.data.microsoft.com.akadns.net, FuckRogueSoftware
+DOMAIN-SUFFIX, ask.log.kuyun.com, FuckRogueSoftware
+DOMAIN-SUFFIX, aspect-upush.umeng.com, FuckRogueSoftware
+DOMAIN-SUFFIX, assets.adspruce.com, FuckRogueSoftware
+DOMAIN-SUFFIX, assets.amung.us, FuckRogueSoftware
+DOMAIN-SUFFIX, assistant.pandora.xiaomi.com, FuckRogueSoftware
+DOMAIN-SUFFIX, assoc-amazon.co.uk, FuckRogueSoftware
+DOMAIN-SUFFIX, assoc-amazon.com, FuckRogueSoftware
+DOMAIN-SUFFIX, assp.sohu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, astyanax.io, FuckRogueSoftware
+DOMAIN, at-img1.tdimg.com, FuckRogueSoftware
+DOMAIN, at-img2.tdimg.com, FuckRogueSoftware
+DOMAIN, at-img3.tdimg.com, FuckRogueSoftware
+DOMAIN-SUFFIX, at.360.audion.fm, FuckRogueSoftware
+DOMAIN, at.pinduoduo.com, FuckRogueSoftware
+DOMAIN-SUFFIX, at.umeng.com, FuckRogueSoftware
+DOMAIN-SUFFIX, atanx.alicdn.com, FuckRogueSoftware
+DOMAIN, atanx2.alicdn.com, FuckRogueSoftware
+DOMAIN-SUFFIX, atapp.adjust.com, FuckRogueSoftware
+DOMAIN-SUFFIX, atj-kuaishou.37.com.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, atlas-emui-drcn.hicloud.com, FuckRogueSoftware
+DOMAIN-SUFFIX, atlassian-cookies--categories.us-east-1.prod.public.atl-paas.net, FuckRogueSoftware
+DOMAIN-SUFFIX, atm.cp31.ott.cibntv.net, FuckRogueSoftware
+DOMAIN, atm.youku.com, FuckRogueSoftware
+DOMAIN-SUFFIX, atom-log.3.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, atrace.chelaile.net.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, ats-wrapper.privacymanager.io, FuckRogueSoftware
+DOMAIN-SUFFIX, attentivemobile.com.cdn.cloudflare.net, FuckRogueSoftware
+DOMAIN-SUFFIX, attr.appsflyer.com, FuckRogueSoftware
+DOMAIN-SUFFIX, attr.appsflyersdk.com, FuckRogueSoftware
+DOMAIN-SUFFIX, aty.sohu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, au.umeng.co, FuckRogueSoftware
+DOMAIN-SUFFIX, au.umeng.com, FuckRogueSoftware
+DOMAIN-SUFFIX, aud.adjust-net.jp, FuckRogueSoftware
+DOMAIN-SUFFIX, audd.shuzilm.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, audid-api-sg.taobao.com, FuckRogueSoftware
+DOMAIN-SUFFIX, audid-api.taobao.com, FuckRogueSoftware
+DOMAIN-SUFFIX, audid.umeng.com, FuckRogueSoftware
+DOMAIN, audit.aaa.mgtv.com, FuckRogueSoftware
+DOMAIN-SUFFIX, aurorapush.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, aurorapush.com, FuckRogueSoftware
+DOMAIN, auth-em.hismarttv.com, FuckRogueSoftware
+DOMAIN, auth-launcher-em.hismarttv.com, FuckRogueSoftware
+DOMAIN, auth-launcher-na.hismarttv.com, FuckRogueSoftware
+DOMAIN, auth-na.hismarttv.com, FuckRogueSoftware
+DOMAIN-SUFFIX, auth.be.sec.miui.com, FuckRogueSoftware
+DOMAIN-SUFFIX, authbe.sec.intl.miui.com, FuckRogueSoftware
+DOMAIN-SUFFIX, authedmine.com, FuckRogueSoftware
+DOMAIN-SUFFIX, authedmine.eu, FuckRogueSoftware
+DOMAIN-SUFFIX, authedwebmine.cz, FuckRogueSoftware
+DOMAIN-SUFFIX, authsms.hk.gslb.mob.com, FuckRogueSoftware
+DOMAIN-SUFFIX, autologica.ga, FuckRogueSoftware
+DOMAIN-SUFFIX, aviary.amazon.com, FuckRogueSoftware
+DOMAIN, avlstatic.vivo.com.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, awake-stats.jpush.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, awap3.jos.hicloud.com, FuckRogueSoftware
+DOMAIN-SUFFIX, aweme-hl.snssdk.com, FuckRogueSoftware
+DOMAIN-SUFFIX, aweme.snssdk.com, FuckRogueSoftware
+DOMAIN-SUFFIX, aws-logsdk.snackvideo.com, FuckRogueSoftware
+DOMAIN, awssgp0-files.fds.api.xiaomi.com, FuckRogueSoftware
+DOMAIN-SUFFIX, axoncoho.tk, FuckRogueSoftware
+DOMAIN, az.appstore.vivo.com.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, azwancan.trafficmanager.net, FuckRogueSoftware
+DOMAIN-SUFFIX, b-eu10.stripcdn.com, FuckRogueSoftware
+DOMAIN-SUFFIX, b-eu15.stripcdn.com, FuckRogueSoftware
+DOMAIN-SUFFIX, b-eu4.stripcdn.com, FuckRogueSoftware
+DOMAIN-SUFFIX, b-eu5.stripcdn.com, FuckRogueSoftware
+DOMAIN-SUFFIX, b-eu6.stripcdn.com, FuckRogueSoftware
+DOMAIN-SUFFIX, b-eu8.stripcdn.com, FuckRogueSoftware
+DOMAIN-SUFFIX, b-eu9.stripcdn.com, FuckRogueSoftware
+DOMAIN-SUFFIX, b-gi.getui.com, FuckRogueSoftware
+DOMAIN-SUFFIX, b-gi.getui.net, FuckRogueSoftware
+DOMAIN-SUFFIX, b-graph.facebook.com, FuckRogueSoftware
+DOMAIN-SUFFIX, b-gtc.gepush.com, FuckRogueSoftware
+DOMAIN-SUFFIX, b-gtc.getui.com, FuckRogueSoftware
+DOMAIN-SUFFIX, b-gtc.getui.net, FuckRogueSoftware
+DOMAIN-SUFFIX, b.ads2.msads.net, FuckRogueSoftware
+DOMAIN, b.netcheck.gallery.pandora.xiaomi.com, FuckRogueSoftware
+DOMAIN, b.smartvideo.youku.com, FuckRogueSoftware
+DOMAIN, b02.black.ndmdhs.com, FuckRogueSoftware
+DOMAIN-SUFFIX, babel-statistics-android.d.meituan.net, FuckRogueSoftware
+DOMAIN-SUFFIX, bablace.com, FuckRogueSoftware
+DOMAIN-SUFFIX, backend.adjust.io, FuckRogueSoftware
+DOMAIN-SUFFIX, backup.adjust.com, FuckRogueSoftware
+DOMAIN-SUFFIX, badge.facebook.com, FuckRogueSoftware
+DOMAIN-SUFFIX, bafybeidravcab5p3acvthxtwosm4rfpl4yypwwm52s7sazgxaezfzn5xn4.ipfs.infura-ipfs.io, FuckRogueSoftware
+DOMAIN-SUFFIX, baichuan-sdk.alicdn.com, FuckRogueSoftware
+DOMAIN-SUFFIX, baichuan-sdk.taobao.com, FuckRogueSoftware
+DOMAIN-SUFFIX, baichuan.baidu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, baiduccdn1.com, FuckRogueSoftware
+DOMAIN-SUFFIX, baidutv.baidu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, baiduyubaidu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, baifen.music.baidu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, bam.nr-data.net.cdn.cloudflare.net, FuckRogueSoftware
+DOMAIN-SUFFIX, banlv.baidu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, banner.appsflyer.com, FuckRogueSoftware
+DOMAIN-SUFFIX, banners.mobile.yandex.net, FuckRogueSoftware
+DOMAIN-SUFFIX, bar.baidu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, bas.cmbchina.cn, FuckRogueSoftware
+DOMAIN, bas.hismarttv.com, FuckRogueSoftware
+DOMAIN-SUFFIX, base.shuzilm.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, bat.bing.com, FuckRogueSoftware
+DOMAIN-SUFFIX, bat.bing.net, FuckRogueSoftware
+DOMAIN-SUFFIX, bc-ad-vod.zdmimg.com, FuckRogueSoftware
+DOMAIN-SUFFIX, bcd.caiyunapp.com, FuckRogueSoftware
+DOMAIN, bcdn-dbff2e04.we-stats.com, FuckRogueSoftware
+DOMAIN, bcdn-god.we-stats.com, FuckRogueSoftware
+DOMAIN-SUFFIX, bce.baidu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, bcfeedback.taobao.com, FuckRogueSoftware
+DOMAIN-SUFFIX, bcy-promo.snssdk.com, FuckRogueSoftware
+DOMAIN-SUFFIX, bd.ahsrst.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, bd.hd.sohu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, bdapp.adjust.com, FuckRogueSoftware
+DOMAIN-SUFFIX, bdbus-turbonet.baidu.com, FuckRogueSoftware
+DOMAIN, bdcore-apr-lb.bda.ndmdhs.com, FuckRogueSoftware
+DOMAIN-KEYWORD, bdcpro*.techweb.com.cn, FuckRogueSoftware # Changed from HOST-WILDCARD
+DOMAIN-SUFFIX, bdplus.baidu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, bds.snssdk.com, FuckRogueSoftware
+DOMAIN-SUFFIX, beacon-api.aliyuncs.com, FuckRogueSoftware
+DOMAIN-SUFFIX, beacon.cdn.qq.com, FuckRogueSoftware
+DOMAIN, beacon.gtimg.com, FuckRogueSoftware
+DOMAIN-SUFFIX, beacon.netflix.com, FuckRogueSoftware
+DOMAIN-SUFFIX, beacon.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, beacon.sina.com.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, beacon.tingyun.com, FuckRogueSoftware
+DOMAIN-SUFFIX, beaconcdn.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, beacondataport.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, beaconimages-prod.dradis.netflix.com, FuckRogueSoftware
+DOMAIN-SUFFIX, beaconimages.netflix.net, FuckRogueSoftware
+DOMAIN-SUFFIX, beaconimages.test.netflix.net, FuckRogueSoftware
+DOMAIN-SUFFIX, beapp.adjust.com, FuckRogueSoftware
+DOMAIN-SUFFIX, becanium.com, FuckRogueSoftware
+DOMAIN-SUFFIX, berateveng.ru, FuckRogueSoftware
+DOMAIN-SUFFIX, besocial.online, FuckRogueSoftware
+DOMAIN-SUFFIX, best-practice.se, FuckRogueSoftware
+DOMAIN-SUFFIX, bestcoinsignals.com, FuckRogueSoftware
+DOMAIN-SUFFIX, besti.ga, FuckRogueSoftware
+DOMAIN-SUFFIX, bestsrv.de, FuckRogueSoftware
+DOMAIN-SUFFIX, bewaslac.com, FuckRogueSoftware
+DOMAIN-SUFFIX, bfapp.adjust.com, FuckRogueSoftware
+DOMAIN-SUFFIX, bhwkju.vivo.com, FuckRogueSoftware
+DOMAIN-SUFFIX, bi.cname.getui.com, FuckRogueSoftware
+DOMAIN-SUFFIX, biberukalap.com, FuckRogueSoftware
+DOMAIN-SUFFIX, bidtellect.atlassian.net, FuckRogueSoftware
+DOMAIN-SUFFIX, bigapp.mob.com, FuckRogueSoftware
+DOMAIN-SUFFIX, bigdata.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, binarybusiness.de, FuckRogueSoftware
+DOMAIN-SUFFIX, bingads.microsoft.com, FuckRogueSoftware
+DOMAIN-SUFFIX, binomo2.zendesk.com, FuckRogueSoftware
+DOMAIN-SUFFIX, bitcoin-cashcard.com, FuckRogueSoftware
+DOMAIN-SUFFIX, bitcoin-cashcard.de, FuckRogueSoftware
+DOMAIN-SUFFIX, bitcoin-cashcard.eu, FuckRogueSoftware
+DOMAIN-SUFFIX, bitcoin-pay.eu, FuckRogueSoftware
+DOMAIN-SUFFIX, bitcoin-pocket.de, FuckRogueSoftware
+DOMAIN-SUFFIX, bitcoin-pocket.eu, FuckRogueSoftware
+DOMAIN-SUFFIX, bittorrent.es, FuckRogueSoftware
+DOMAIN-SUFFIX, biz.appsflyer.com, FuckRogueSoftware
+DOMAIN-SUFFIX, bizapp.adjust.com, FuckRogueSoftware
+DOMAIN-SUFFIX, bj-api.srv.jpush.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, bj.baidubce.com, FuckRogueSoftware
+DOMAIN-SUFFIX, bjfesdk.douyucdn.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, bjim64.jpush.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, bjpg-log.ksapisrv.com, FuckRogueSoftware
+DOMAIN-SUFFIX, bjuser-ipv6.jpush.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, bjuser.jpush.cn, FuckRogueSoftware
+DOMAIN, bk.ps2.gamedl.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, bkcommdata.v.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, bkmcgi.play.cp81.ott.cibntv.net, FuckRogueSoftware
+DOMAIN-SUFFIX, bksdkconfig.play.cp81.ott.cibntv.net, FuckRogueSoftware
+DOMAIN-SUFFIX, bksoup.v.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, blackhole-m.m.jd.com, FuckRogueSoftware
+DOMAIN, blackhole.m.jd.com, FuckRogueSoftware
+DOMAIN-SUFFIX, blobcollector.events.data.trafficmanager.net, FuckRogueSoftware
+DOMAIN-SUFFIX, bmcm.ml, FuckRogueSoftware
+DOMAIN-SUFFIX, bmcm.pw, FuckRogueSoftware
+DOMAIN-SUFFIX, bmnr.pw, FuckRogueSoftware
+DOMAIN-SUFFIX, bmst.pw, FuckRogueSoftware
+DOMAIN-SUFFIX, bn2-ris-ap-prod-atm.trafficmanager.net, FuckRogueSoftware
+DOMAIN-SUFFIX, bn2-ris-prod-atm.trafficmanager.net, FuckRogueSoftware
+DOMAIN, bn2wns1.wns.windows.com, FuckRogueSoftware
+DOMAIN, bn3sch020010558.wns.windows.com, FuckRogueSoftware
+DOMAIN, bn4sch101120814.wns.windows.com, FuckRogueSoftware
+DOMAIN-SUFFIX, bobo.163.com, FuckRogueSoftware
+DOMAIN-SUFFIX, bootcdn.net, FuckRogueSoftware
+DOMAIN-SUFFIX, bootcss.com, FuckRogueSoftware
+DOMAIN, boss.qzone.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, br.appsflyer.com, FuckRogueSoftware
+DOMAIN-SUFFIX, br.baidu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, br.bmbs.baidu.com, FuckRogueSoftware
+DOMAIN, br.ibs.lgappstv.com, FuckRogueSoftware
+DOMAIN-SUFFIX, brance.play.cp81.ott.cibntv.net, FuckRogueSoftware
+DOMAIN-SUFFIX, branch.io, FuckRogueSoftware
+DOMAIN-SUFFIX, brandadsstatic.vivo.com.cn, FuckRogueSoftware
+DOMAIN, bravia-cfgdst-ore-pro.bda.ndmdhs.com, FuckRogueSoftware
+DOMAIN, bravia.dl.playstation.net, FuckRogueSoftware
+DOMAIN-SUFFIX, brightline.tv.edgekey.net, FuckRogueSoftware
+DOMAIN-SUFFIX, brominer.com, FuckRogueSoftware
+DOMAIN-SUFFIX, browser.events.data.msn.com, FuckRogueSoftware
+DOMAIN-SUFFIX, browser.pipe.aria.microsoft.com, FuckRogueSoftware
+DOMAIN-SUFFIX, browserconf.vivo.com.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, browserkernel.baidu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, browsermine.com, FuckRogueSoftware
+DOMAIN-SUFFIX, bs.serving-sys.com, FuckRogueSoftware
+DOMAIN-SUFFIX, bsdk-sg.bytegsdk.com, FuckRogueSoftware
+DOMAIN-SUFFIX, bsdk19-sg.bytegsdk.com, FuckRogueSoftware
+DOMAIN-SUFFIX, bslivepull.qing.mgtv.com, FuckRogueSoftware
+DOMAIN-SUFFIX, bsrv.qq.com, FuckRogueSoftware
+DOMAIN, bss.pandora.xiaomi.com, FuckRogueSoftware
+DOMAIN, bsv.atm.youku.com, FuckRogueSoftware
+DOMAIN-SUFFIX, btlaunch.baidu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, btrace.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, btrace.video.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, btrace.ysp.cctv.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, bugly.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, bugly.qq.com.lan, FuckRogueSoftware
+DOMAIN-SUFFIX, bugreportv2.qq.com, FuckRogueSoftware
+DOMAIN, bugtags.com, FuckRogueSoftware
+DOMAIN-SUFFIX, buluo.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, bybapp.adjust.com, FuckRogueSoftware
+DOMAIN, byteair-api-sg1.byteintlapi.com, FuckRogueSoftware
+DOMAIN-SUFFIX, bz-ipdx.baidu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, bz.getui.com, FuckRogueSoftware
+DOMAIN-SUFFIX, bzclk.baidu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, c-adash.m.taobao.com, FuckRogueSoftware
+DOMAIN-SUFFIX, c-eu1.stripcdn.com, FuckRogueSoftware
+DOMAIN-SUFFIX, c-eu2.stripcdn.com, FuckRogueSoftware
+DOMAIN-SUFFIX, c-eu3.stripcdn.com, FuckRogueSoftware
+DOMAIN-SUFFIX, c-eu4.stripcdn.com, FuckRogueSoftware
+DOMAIN-SUFFIX, c-eu5.stripcdn.com, FuckRogueSoftware
+DOMAIN-SUFFIX, c-eu8.stripcdn.com, FuckRogueSoftware
+DOMAIN-SUFFIX, c-gate.singular.net, FuckRogueSoftware
+DOMAIN-SUFFIX, c-gi.getui.com, FuckRogueSoftware
+DOMAIN-SUFFIX, c-gs.getui.com, FuckRogueSoftware
+DOMAIN-SUFFIX, c-gtc.getui.com, FuckRogueSoftware
+DOMAIN-SUFFIX, c-gtc.getui.net, FuckRogueSoftware
+DOMAIN-SUFFIX, c-hzgt2.getui.com, FuckRogueSoftware
+DOMAIN-SUFFIX, c-nfa.jd.com, FuckRogueSoftware
+DOMAIN-SUFFIX, c-ss.getui.com, FuckRogueSoftware
+DOMAIN-SUFFIX, c-uid.getui.com, FuckRogueSoftware
+DOMAIN-SUFFIX, c-us1.stripcdn.com, FuckRogueSoftware
+DOMAIN-SUFFIX, c-us2.stripcdn.com, FuckRogueSoftware
+DOMAIN-SUFFIX, c-us3.stripcdn.com, FuckRogueSoftware
+DOMAIN-SUFFIX, c-us4.stripcdn.com, FuckRogueSoftware
+DOMAIN-SUFFIX, c-us5.stripcdn.com, FuckRogueSoftware
+DOMAIN-SUFFIX, c-us8.stripcdn.com, FuckRogueSoftware
+DOMAIN-WILDCARD, c.*.msn.com, FuckRogueSoftware # Retained as DOMAIN-WILDCARD
+DOMAIN-SUFFIX, c.atdmt.com, FuckRogueSoftware
+DOMAIN-SUFFIX, c.aw.ak.mob.com, FuckRogueSoftware
+DOMAIN-SUFFIX, c.baidu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, c.bing.com, FuckRogueSoftware
+DOMAIN-SUFFIX, c.data.mob.com, FuckRogueSoftware
+DOMAIN-SUFFIX, c.fa.jd.com, FuckRogueSoftware
+DOMAIN-SUFFIX, c.gj.qq.com, FuckRogueSoftware
+DOMAIN, c.isdspeed.qq.com, FuckRogueSoftware
+DOMAIN, c.live.com, FuckRogueSoftware
+DOMAIN-SUFFIX, c.mcd.cn, FuckRogueSoftware
+DOMAIN, c.microsoft.com, FuckRogueSoftware
+DOMAIN-SUFFIX, c.msn.com, FuckRogueSoftware
+DOMAIN-SUFFIX, c.msn.com.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, c.sayhi.360.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, c.singular.net, FuckRogueSoftware
+DOMAIN, c.uaa.iqiyi.com, FuckRogueSoftware
+DOMAIN, c.yes.youku.com, FuckRogueSoftware
+DOMAIN-SUFFIX, c3-cache.browser.miui.com, FuckRogueSoftware
+DOMAIN, ca.ibs.lgappstv.com, FuckRogueSoftware
+DOMAIN-SUFFIX, caapp.adjust.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cache.datamart.windows.com, FuckRogueSoftware
+DOMAIN-SUFFIX, caclick.baidu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cad.youku.com, FuckRogueSoftware
+DOMAIN-SUFFIX, caid.shuzilm.cn, FuckRogueSoftware
+DOMAIN, call.me.sel.sony.com, FuckRogueSoftware
+DOMAIN-SUFFIX, campaign-dra.jos.hicloud.com, FuckRogueSoftware
+DOMAIN-SUFFIX, campaign-dre.music.hicloud.com, FuckRogueSoftware
+DOMAIN-SUFFIX, campaign-himovie.hicloud.com, FuckRogueSoftware
+DOMAIN-SUFFIX, campaign-music.hicloud.com, FuckRogueSoftware
+DOMAIN-SUFFIX, campaigncs-dra.himovie.hicloud.com, FuckRogueSoftware
+DOMAIN-SUFFIX, candid.zone, FuckRogueSoftware
+DOMAIN-SUFFIX, capi.voice.gcloud.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, capture.trackjs.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cards.twitter.com, FuckRogueSoftware
+DOMAIN-SUFFIX, careers.adjust.com, FuckRogueSoftware
+DOMAIN-SUFFIX, careers.appsflyer.com, FuckRogueSoftware
+DOMAIN, casestudy.html5.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cashbeet.com, FuckRogueSoftware
+DOMAIN-SUFFIX, castatic.fengkongcloud.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cb.baidu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cbjs.baidu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cbjslog.baidu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cbsipv4.shuzilm.cn, FuckRogueSoftware
+DOMAIN, cbu01.alicdn.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cc-analytics--cdn.us-east-1.prod.public.atl-paas.net, FuckRogueSoftware
+DOMAIN, cc.m.jd.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cc.map.qq.com, FuckRogueSoftware
+DOMAIN, cc.sys.intl.xiaomi.com, FuckRogueSoftware
+DOMAIN, cc.sys.miui.com, FuckRogueSoftware
+DOMAIN, cc2.sys.intl.xiaomi.com, FuckRogueSoftware
+DOMAIN, cc2.sys.miui.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cca.mob.com, FuckRogueSoftware
+DOMAIN, ccc.sys.intl.xiaomi.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ccc.sys.miui.com, FuckRogueSoftware
+DOMAIN, ccclub.cmbchina.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ccpa-wrapper.privacymanager.io, FuckRogueSoftware
+DOMAIN-SUFFIX, ccpa.privacymanager.io, FuckRogueSoftware
+DOMAIN-SUFFIX, ccs.umeng.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cctv.mmstat.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cdn-adn-https-new.mtgglobals.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cdn-ads.oss-cn-shanghai.aliyuncs.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cdn-api-verify.mob.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cdn-assets.adspruce.com, FuckRogueSoftware
+DOMAIN, cdn-bos-launcher.hismarttv.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cdn-config.taplytics.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cdn-haokanapk.baidu.com, FuckRogueSoftware
+DOMAIN, cdn-param-launcher.hismarttv.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cdn-sdk-opt.getui.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cdn-settings.appsflyer.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cdn-settings.appsflyersdk.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cdn-testsettings.appsflyersdk.com, FuckRogueSoftware
+DOMAIN, cdn-v2-api-channel-launcher.hismarttv.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cdn-vast.adspruce.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cdn-video.adspruce.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cdn.adless.io, FuckRogueSoftware
+DOMAIN-SUFFIX, cdn.adsplay.xyz, FuckRogueSoftware
+DOMAIN-SUFFIX, cdn.adtrue.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cdn.apflyer.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cdn.appsflyer.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cdn.appsflyer.com.cdn.cloudflare.net, FuckRogueSoftware
+DOMAIN-SUFFIX, cdn.ark.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cdn.atdmt.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cdn.branch.io, FuckRogueSoftware
+DOMAIN-SUFFIX, cdn.braze.eu, FuckRogueSoftware
+DOMAIN, cdn.chinaliftoff-creatives.io, FuckRogueSoftware
+DOMAIN-SUFFIX, cdn.cloudcoins.co, FuckRogueSoftware
+DOMAIN, cdn.cmop.mgtv.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cdn.fds.api.xiaomi.com, FuckRogueSoftware
+DOMAIN, cdn.getkoala.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cdn.isnssdk.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cdn.isprog.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cdn.minescripts.info, FuckRogueSoftware
+DOMAIN-SUFFIX, cdn.singular.net, FuckRogueSoftware
+DOMAIN-SUFFIX, cdn.spotxcdn.com.edgekey.net, FuckRogueSoftware
+DOMAIN, cdn.tanx.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cdn.taplytics.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cdn.trackjs.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cdn.weathwe.hao.360.cn, FuckRogueSoftware
+DOMAIN, cdn0.mobmore.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cdn1.pebx.pl, FuckRogueSoftware
+DOMAIN-SUFFIX, cdn2.inner-active.mobi, FuckRogueSoftware
+DOMAIN-SUFFIX, cdnappicons.appsflyer.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cdnappiconstest.appsflyer.com, FuckRogueSoftware
+DOMAIN, cdnimg.3g.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cdnjs.cloudflane.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cdnjs.cloudflare.st, FuckRogueSoftware
+DOMAIN-SUFFIX, cdp.cloud.unity3d.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ce3e75d5.jpush.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, cert-test.sandbox.google.com, FuckRogueSoftware
+DOMAIN, ceuswatcab01.blob.core.windows.net, FuckRogueSoftware
+DOMAIN-SUFFIX, cfapp.adjust.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cfcdist.gdn, FuckRogueSoftware
+DOMAIN-SUFFIX, cfg.imtt.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cgi.connect.qq.com, FuckRogueSoftware
+DOMAIN, cgi.pub.qq.com, FuckRogueSoftware
+DOMAIN, cgi.qplus.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cgicol.amap.com, FuckRogueSoftware
+DOMAIN-SUFFIX, changyan.sohu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, channel-analysis-js.gmw.cn, FuckRogueSoftware
+DOMAIN, chat.global.xiaomi.net, FuckRogueSoftware
+DOMAIN-SUFFIX, chat1.jd.com, FuckRogueSoftware
+DOMAIN-SUFFIX, chatapp.adjust.com, FuckRogueSoftware
+DOMAIN-SUFFIX, chatenabled.mail.google.com, FuckRogueSoftware
+DOMAIN-SUFFIX, choice.microsoft.com, FuckRogueSoftware
+DOMAIN-SUFFIX, choice.microsoft.com.nsatc.net, FuckRogueSoftware
+DOMAIN, choices-or.truste.com, FuckRogueSoftware
+DOMAIN, choices.truste.com, FuckRogueSoftware
+DOMAIN-SUFFIX, chua.umeng.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cir-smart.baidu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cjhq.baidu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ck.juicyads.com, FuckRogueSoftware
+DOMAIN-SUFFIX, clapp.adjust.com, FuckRogueSoftware
+DOMAIN-SUFFIX, clarity.zendesk.com, FuckRogueSoftware
+DOMAIN-SUFFIX, clck.yandex.com, FuckRogueSoftware
+DOMAIN-SUFFIX, clck.yandex.ru, FuckRogueSoftware
+DOMAIN-SUFFIX, cleaner.baidu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, clgserv.pro, FuckRogueSoftware
+DOMAIN-SUFFIX, click.aliyun.com, FuckRogueSoftware
+DOMAIN-SUFFIX, click.bes.baidu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, click.fanyi.baidu.com, FuckRogueSoftware
+DOMAIN, click.gds.tanx.com, FuckRogueSoftware
+DOMAIN-SUFFIX, click.hd.sohu.com.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, click.jr.jd.com, FuckRogueSoftware
+DOMAIN, click.mz.simba.taobao.com, FuckRogueSoftware
+DOMAIN-SUFFIX, click.nvgaming.nvidia.com, FuckRogueSoftware
+DOMAIN-SUFFIX, click.sender.yandex.ru, FuckRogueSoftware
+DOMAIN-SUFFIX, click.tz.simba.taobao.com, FuckRogueSoftware
+DOMAIN-SUFFIX, click2.hd.sohu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, client-events.inner-active.mobi, FuckRogueSoftware
+DOMAIN, client-log.box.com, FuckRogueSoftware
+DOMAIN-SUFFIX, client-log.dewu.com, FuckRogueSoftware
+DOMAIN, client-log.karte.io, FuckRogueSoftware
+DOMAIN-SUFFIX, client-log.poizon.com, FuckRogueSoftware
+DOMAIN-SUFFIX, client-registry.mutinycdn.com, FuckRogueSoftware
+DOMAIN-SUFFIX, client-report.bh3.com, FuckRogueSoftware
+DOMAIN-SUFFIX, client.baidu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, client.mutinycdn.com, FuckRogueSoftware
+DOMAIN-SUFFIX, client.show.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, client_monitor.isnssdk.com, FuckRogueSoftware
+DOMAIN-SUFFIX, clientlog.music.163.com, FuckRogueSoftware
+DOMAIN-SUFFIX, clientlog3.music.163.com, FuckRogueSoftware
+DOMAIN-SUFFIX, clientreport.gfm.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, clients.adspruce.com, FuckRogueSoftware
+DOMAIN-SUFFIX, clientsdk.launchdarkly.us, FuckRogueSoftware
+DOMAIN-SUFFIX, clientstream.launchdarkly.us, FuckRogueSoftware
+DOMAIN-SUFFIX, cloud-miner.de, FuckRogueSoftware
+DOMAIN-SUFFIX, cloud-miner.eu, FuckRogueSoftware
+DOMAIN-SUFFIX, cloud.browser.360.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, cloud.sensorsdata.cn, FuckRogueSoftware
+DOMAIN, cloud.tgpa.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cloudcdn.gdn, FuckRogueSoftware
+DOMAIN-SUFFIX, cloudconf.fengkongcloud.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cloudcontrol.rong-edge.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cloudflareinsights.com, FuckRogueSoftware
+DOMAIN, cloudpush.iqiyi.com, FuckRogueSoftware
+DOMAIN-SUFFIX, club-img.douyucdn.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, clubapp.adjust.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cm-10-133.getui.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cm-10-134.getui.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cm-10-139.getui.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cm.baidu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cm.bilibili.com, FuckRogueSoftware
+DOMAIN, cm.ipinyou.com, FuckRogueSoftware
+DOMAIN, cm.jd.com, FuckRogueSoftware
+DOMAIN, cm.mlt01.com, FuckRogueSoftware
+DOMAIN, cm.passport.iqiyi.com, FuckRogueSoftware
+DOMAIN, cmop.mgtv.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cmp-consent-tool.privacymanager.io, FuckRogueSoftware
+DOMAIN-SUFFIX, cmp-vendors.privacymanager.io, FuckRogueSoftware
+DOMAIN, cms.tanx.com, FuckRogueSoftware
+DOMAIN, cmshow.gtimg.cn, FuckRogueSoftware
+DOMAIN, cmshow.qq.com, FuckRogueSoftware
+DOMAIN, cmtw.pinduoduo.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cn-yys-prod-logproxy.mhystatic.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cn.app.chat.xiaomi.net, FuckRogueSoftware
+DOMAIN, cn.hz.wagbridge.ad.alibabacorp.com.gds.alibabadns.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cn.rongnav.com, FuckRogueSoftware
+DOMAIN, cn.zb.v4.wagbridge.ad.alibabacorp.com.gds.alibabadns.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cnaac.getui.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cnadid.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, cnadid.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cname.getui.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cncapi.getui.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cnhv.co, FuckRogueSoftware
+DOMAIN-SUFFIX, cnlogs.umeng.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cnt.statistic.date, FuckRogueSoftware
+DOMAIN-SUFFIX, cnuspider.yuanshen.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cny-pro.kwd.inkuai.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cnzz.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cnzz.mmstat.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cnzz.net, FuckRogueSoftware
+DOMAIN-SUFFIX, coapp.adjust.com, FuckRogueSoftware
+DOMAIN, cobrowse.oraclecloud.com, FuckRogueSoftware
+DOMAIN-SUFFIX, coin-have.com, FuckRogueSoftware
+DOMAIN-SUFFIX, coinblind.com, FuckRogueSoftware
+DOMAIN-SUFFIX, coinerra.com, FuckRogueSoftware
+DOMAIN-SUFFIX, coinhiveproxy.com, FuckRogueSoftware
+DOMAIN-SUFFIX, coinminingonline.com, FuckRogueSoftware
+DOMAIN-SUFFIX, coinnebula.com, FuckRogueSoftware
+DOMAIN-SUFFIX, coinpirate.cf, FuckRogueSoftware
+DOMAIN-SUFFIX, coinpot.co, FuckRogueSoftware
+DOMAIN-SUFFIX, coinrail.io, FuckRogueSoftware
+DOMAIN, col.eum-appdynamics.com, FuckRogueSoftware
+DOMAIN-WILDCARD, collect.*.miui.com, FuckRogueSoftware # Retained as DOMAIN-WILDCARD
+DOMAIN-SUFFIX, collect.alipay.com, FuckRogueSoftware
+DOMAIN-SUFFIX, collect.bz.mgtv.com, FuckRogueSoftware
+DOMAIN-SUFFIX, collect.wsq.umeng.com, FuckRogueSoftware
+DOMAIN-SUFFIX, collection.rong-edge.com, FuckRogueSoftware
+DOMAIN-SUFFIX, collector.dcdn.baidu.com, FuckRogueSoftware
+DOMAIN, com-apache-alpha-wxopen-learning-12.lb.1.oppo.cn, FuckRogueSoftware
+DOMAIN, com-apache-i-topic-control-learning-12.lb.1.oppo.cn, FuckRogueSoftware
+DOMAIN, com-apache-i-topic-control-learning-12eng.lb.1.oppo.cn, FuckRogueSoftware
+DOMAIN, com-apache-i-topic-wxopen-learning-12traffic-10.lb.1.oppo.cn, FuckRogueSoftware
+DOMAIN, com-apache-i-topic-wxopen-learning-12traffic.lb.1.oppo.cn, FuckRogueSoftware
+DOMAIN, com-cloud-0-authvip-168360-engine-team.14.0.oppo.cn, FuckRogueSoftware
+DOMAIN, com-cloud-0-authvip-168360-engine.14.0.oppo.cn, FuckRogueSoftware
+DOMAIN, com-cloud-0-eventsold-168360-engine.14.0.oppo.cn, FuckRogueSoftware
+DOMAIN, com-cloud-0-eventsvip-svc-engine.14.0.oppo.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, com.umeng.com, FuckRogueSoftware
+DOMAIN-SUFFIX, comapp.adjust.com, FuckRogueSoftware
+DOMAIN-SUFFIX, commdata.v.qq.com, FuckRogueSoftware
+DOMAIN, commdata6.v.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, commerce.bing.com, FuckRogueSoftware
+DOMAIN-SUFFIX, community.jiguang.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, compatexchange1.trafficmanager.net, FuckRogueSoftware
+DOMAIN-SUFFIX, compliance.tdos.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, compte-facebook.ws, FuckRogueSoftware
+DOMAIN-SUFFIX, conf.getui.com, FuckRogueSoftware
+DOMAIN-SUFFIX, conf.hpplay.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, conf.international.baidu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, confiant.msn.com, FuckRogueSoftware
+DOMAIN-SUFFIX, config-ipv6.jpush.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, config-junion.jpush.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, config.cmpassport.com, FuckRogueSoftware
+DOMAIN-SUFFIX, config.jpush-ipv6.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, config.jpush.cn, FuckRogueSoftware
+DOMAIN, config.kuyun.com, FuckRogueSoftware
+DOMAIN-SUFFIX, config.uca.cloud.unity3d.com, FuckRogueSoftware
+DOMAIN-SUFFIX, configserver-dra.platform.hicloud.com, FuckRogueSoftware
+DOMAIN-SUFFIX, configsvr.msf.3g.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, configure-tcp-android.mtgglobals.com, FuckRogueSoftware
+DOMAIN-SUFFIX, connect-dre.hispace.hicloud.com, FuckRogueSoftware
+DOMAIN-SUFFIX, connect.facebook.com, FuckRogueSoftware
+DOMAIN-SUFFIX, connect.facebook.net, FuckRogueSoftware
+DOMAIN, connect.play.ott.video.qq.com, FuckRogueSoftware
+DOMAIN, connect.rom.miui.com, FuckRogueSoftware
+DOMAIN, consent-st.truste.com, FuckRogueSoftware
+DOMAIN-SUFFIX, consent.adjust.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, consent.adjust.world, FuckRogueSoftware
+DOMAIN, consent.truste.com, FuckRogueSoftware
+DOMAIN, contactapi.micloud.xiaomi.net, FuckRogueSoftware
+DOMAIN-SUFFIX, content.appsflyer.com, FuckRogueSoftware
+DOMAIN-SUFFIX, content.experience.appsflyer.com, FuckRogueSoftware
+DOMAIN, content.rconfig.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, contribute.to-support.me, FuckRogueSoftware
+DOMAIN-SUFFIX, contributor.google.com, FuckRogueSoftware
+DOMAIN-SUFFIX, controller.india.xiaomi.com, FuckRogueSoftware
+DOMAIN-SUFFIX, controller.intl.xiaomi.com, FuckRogueSoftware
+DOMAIN-SUFFIX, conv.youdao.com, FuckRogueSoftware
+DOMAIN-SUFFIX, conversions.appsflyer.com, FuckRogueSoftware
+DOMAIN-SUFFIX, conversions.appsflyersdk.com, FuckRogueSoftware
+DOMAIN-SUFFIX, convertexperiments.com.edgekey.net, FuckRogueSoftware
+DOMAIN, coocaatv.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cooltui.com, FuckRogueSoftware
+DOMAIN-SUFFIX, core.jh.dcp.gslb.mob.com, FuckRogueSoftware
+DOMAIN-SUFFIX, core.jh.public.gslb.mob.com, FuckRogueSoftware
+DOMAIN-SUFFIX, corp.adjust.com, FuckRogueSoftware
+DOMAIN-SUFFIX, corp.sohu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, corp.sts.microsoft.com, FuckRogueSoftware
+DOMAIN-SUFFIX, corpext.msitadfs.glbdns2.microsoft.com, FuckRogueSoftware
+DOMAIN, cors.sentcss.com, FuckRogueSoftware
+DOMAIN-SUFFIX, counsel.umeng.com, FuckRogueSoftware
+DOMAIN, count.atm.youku.com, FuckRogueSoftware
+DOMAIN-SUFFIX, count.mail.163.com, FuckRogueSoftware
+DOMAIN-SUFFIX, count.shein.com.edgekey.net, FuckRogueSoftware
+DOMAIN, count.taobao.com, FuckRogueSoftware
+DOMAIN, count.vrs.sohu.com, FuckRogueSoftware
+DOMAIN-KEYWORD, counter*.sextracker.be, FuckRogueSoftware # Changed from HOST-WILDCARD
+DOMAIN-SUFFIX, counter.csdn.net, FuckRogueSoftware
+DOMAIN-SUFFIX, counter.ksosoft.com, FuckRogueSoftware
+DOMAIN-SUFFIX, counter.sina.com.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, countly-api.mysugr.com.cdn.cloudflare.net, FuckRogueSoftware
+DOMAIN-SUFFIX, countly.mail.ntes53.netease.com, FuckRogueSoftware
+DOMAIN-SUFFIX, countly.unus.netease.com, FuckRogueSoftware
+DOMAIN-SUFFIX, countly.zendesk.com, FuckRogueSoftware
+DOMAIN-SUFFIX, countlyv6.mail.ntes53.netease.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cox.adswizz.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cp.adsplay.xyz, FuckRogueSoftware
+DOMAIN-SUFFIX, cp1.adsplay.xyz, FuckRogueSoftware
+DOMAIN-SUFFIX, cpatrk.net, FuckRogueSoftware
+DOMAIN-SUFFIX, cpd.adsplay.xyz, FuckRogueSoftware
+DOMAIN-SUFFIX, cpm.cm.sandai.net, FuckRogueSoftware
+DOMAIN-SUFFIX, cpm.superads.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, cpoml.iask.sina.com.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, cpro.baidu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cpro.baidustatic.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cpro.tieba.baidu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cpro.zhidao.baidu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cpro2.baidu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cpro2.baidustatic.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cps.360buy.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cpu-admin.baidu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cpu-openapi.baidu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cpu.baidu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cpucdn.baidu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cpull.360.cn, FuckRogueSoftware
+DOMAIN-SUFFIX, cqlcorp.atlassian.net, FuckRogueSoftware
+DOMAIN-SUFFIX, crab.baidu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, crash-reports.mozilla.com, FuckRogueSoftware
+DOMAIN-SUFFIX, crash.163.com, FuckRogueSoftware
+DOMAIN-SUFFIX, crash.data.v2.mgtv.com, FuckRogueSoftware
+DOMAIN-SUFFIX, crash.xiaohongshu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, crash2.zhihu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, crashlytics.163.com, FuckRogueSoftware
+DOMAIN-SUFFIX, crashlytics.twitter.com, FuckRogueSoftware
+DOMAIN, crashlyticsreports-pa.googleapis.com, FuckRogueSoftware
+DOMAIN-SUFFIX, crazyegg.com.cdn.cloudflare.net, FuckRogueSoftware
+DOMAIN-SUFFIX, create.unity3d.com, FuckRogueSoftware
+DOMAIN-SUFFIX, creatives-cdn.appsflyer.com, FuckRogueSoftware
+DOMAIN-SUFFIX, credits.bz.mgtv.com, FuckRogueSoftware
+DOMAIN-SUFFIX, crl.microsoft.com, FuckRogueSoftware
+DOMAIN-SUFFIX, crm-analytics.imweb.ru, FuckRogueSoftware
+DOMAIN, cross.report.tgp.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, crs.baidu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cryptaloot.pro, FuckRogueSoftware
+DOMAIN-SUFFIX, crypto-loot.com, FuckRogueSoftware
+DOMAIN-SUFFIX, crypto-webminer.com, FuckRogueSoftware
+DOMAIN-SUFFIX, crypto.csgocpu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cryptoloot.pro, FuckRogueSoftware
+DOMAIN-SUFFIX, cs-op.douyucdn.cn, FuckRogueSoftware
+DOMAIN, cs.mbgame.gamesafe.qq.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cs.snssdk.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cs1.wpc.v0cdn.net, FuckRogueSoftware
+DOMAIN-SUFFIX, cs905.wac.systemcdn.net, FuckRogueSoftware
+DOMAIN-SUFFIX, csp-reporting.cloudflare.com, FuckRogueSoftware
+DOMAIN-SUFFIX, csp.yahoo.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cstm-ads.nbcuni.com.cdn.cloudflare.net, FuckRogueSoftware
+DOMAIN-SUFFIX, cstm.baidu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ct.sendgrid.net, FuckRogueSoftware
+DOMAIN-SUFFIX, ctobsnssdk.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ctr.hd.sohu.com, FuckRogueSoftware
+DOMAIN-SUFFIX, ctv.appsflyer.com, FuckRogueSoftware
+DOMAIN, cudetect.hismarttv.com, FuckRogueSoftware
+DOMAIN-SUFFIX, cupid.ptqy.gitv.tv, FuckRogueSoftware
+DOMAIN-SUFFIX, custom.plausible.io, FuckRogueSoftware
+DOMAIN-SUFFIX, customlinks-nginx-stg.appsflyer.com, FuckRogueSoftware
+DOMAIN-SUFFIX, customlinks-stg.appsflyer.com, Fuck

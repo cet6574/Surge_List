@@ -1,14 +1,5 @@
-Okay, here is the transformed Quantumult X rule set to Surge rules, following your specified term changes.
+# https://www.v2ex.com/t/1151745#reply49
 
-**Key Changes Applied:**
-*   `HOST` -> `DOMAIN`
-*   `HOST-SUFFIX` -> `DOMAIN-SUFFIX`
-*   `HOST-WILDCARD` -> `DOMAIN-WILDCARD` (for patterns like `prefix-*.domain.com`)
-*   `HOST-WILDCARD` with internal wildcards (like `*-keyword-*.domain.com`) or more complex patterns are generally best translated to `DOMAIN-KEYWORD` in Surge for broadest matching. I've used `DOMAIN-KEYWORD` for these cases.
-*   `HOST-KEYWORD` -> `DOMAIN-KEYWORD`
-*   `IP6-CIDR` -> `IP-CIDR6`
-
-```surge
 DOMAIN, a.line.me, NoMalwares
 DOMAIN, d.line-scdn.net, NoMalwares
 DOMAIN, ad.line-scdn.net, NoMalwares

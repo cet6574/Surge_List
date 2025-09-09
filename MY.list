@@ -1,5 +1,6 @@
 # > TNG
 DOMAIN-KEYWORD,tngdigital
+DOMAIN,cdn.marmot-cloud.com
 # > ZUSS
 DOMAIN-KEYWORD,zuscoffee
-DOMAIN-KEYWORD,zus-production
+DOMAIN, zus-production.s3.ap-southeast-1.amazonaws.com
